@@ -11,11 +11,11 @@ function About() {
   return (
     <section
       id="about"
-      className="py-16 md:py-24 lg:py-28 bg-transparent scroll-mt-20"
+      className="pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 md:pb-20 bg-transparent scroll-mt-20 sm:scroll-mt-24"
     >
       <Container>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left */}
 
@@ -70,11 +70,11 @@ function About() {
               {aboutData.subtitle}
             </h2>
 
-            <p className="text-gray-600 mt-4 sm:mt-6 leading-7 sm:leading-8 text-sm sm:text-base">
+            <p className="text-gray-600 mt-3 sm:mt-4 leading-relaxed sm:leading-7 text-sm sm:text-base">
               {aboutData.description}
             </p>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-5 sm:mt-6 space-y-2.5 sm:space-y-3">
 
               {aboutData.points.map((item, index) => (
 
@@ -102,7 +102,7 @@ function About() {
                 inline-flex
                 items-center
                 justify-center
-                mt-8 sm:mt-10
+                mt-6 sm:mt-7
                 text-white
                 px-8 sm:px-9
                 py-3 sm:py-3.5
