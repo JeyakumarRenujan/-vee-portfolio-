@@ -6,7 +6,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="py-16 md:py-24 bg-transparent"
+      className="scroll-mt-20 sm:scroll-mt-24 py-16 md:py-24 bg-transparent"
     >
       <Container>
 

@@ -15,14 +15,14 @@ function Projects() {
 
   const scrollLeft = () => {
     sliderRef.current?.scrollBy({
-      left: -400,
+      left: -370,
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
     sliderRef.current?.scrollBy({
-      left: 400,
+      left: 370,
       behavior: "smooth",
     });
   };
@@ -30,11 +30,12 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="py-8 sm:py-10 md:py-12 bg-transparent"
+      className="scroll-mt-20 sm:scroll-mt-24 py-8 sm:py-10 md:py-12 bg-transparent"
     >
       <Container>
 
-        <div className="relative text-center mb-4 sm:mb-5">
+        {/* Section Header */}
+        <div className="relative text-center mb-5 sm:mb-6">
 
           <p className="text-[#57BA98] font-bold uppercase text-xs sm:text-sm tracking-wider">
             My Works
@@ -44,13 +45,13 @@ function Projects() {
             Featured Projects
           </h2>
 
-          <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-1.5 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
             Some of my projects that demonstrate my technical skills and practical
             experience.
           </p>
 
-          {/* Arrow Buttons - absolute on the right for sm+, inline on mobile */}
-          <div className="flex justify-center sm:justify-end sm:absolute sm:right-0 sm:bottom-0 gap-2.5 mt-3 sm:mt-0">
+          {/* Navigation Controls */}
+          <div className="flex justify-center sm:justify-end sm:absolute sm:right-0 sm:bottom-0 items-center gap-2 mt-3 sm:mt-0">
 
             <button
               onClick={scrollLeft}
@@ -59,18 +60,26 @@ function Projects() {
                 w-9 sm:w-10
                 h-9 sm:h-10
                 rounded-full
-                bg-[#EDF8F5]
+                bg-white
                 text-[#57BA98]
-                shadow-sm
+                border
+                border-[#57BA98]/30
+                shadow-xs
                 hover:bg-[#57BA98]
                 hover:text-white
-                transition
+                hover:border-[#57BA98]
+                hover:shadow-md
+                hover:scale-105
+                active:scale-95
+                transition-all
+                duration-200
                 flex
                 items-center
                 justify-center
+                cursor-pointer
               "
             >
-              <FaChevronLeft className="mx-auto text-sm" />
+              <FaChevronLeft className="text-xs sm:text-sm" />
             </button>
 
             <button
@@ -80,18 +89,26 @@ function Projects() {
                 w-9 sm:w-10
                 h-9 sm:h-10
                 rounded-full
-                bg-[#EDF8F5]
+                bg-white
                 text-[#57BA98]
-                shadow-sm
+                border
+                border-[#57BA98]/30
+                shadow-xs
                 hover:bg-[#57BA98]
                 hover:text-white
-                transition
+                hover:border-[#57BA98]
+                hover:shadow-md
+                hover:scale-105
+                active:scale-95
+                transition-all
+                duration-200
                 flex
                 items-center
                 justify-center
+                cursor-pointer
               "
             >
-              <FaChevronRight className="mx-auto text-sm" />
+              <FaChevronRight className="text-xs sm:text-sm" />
             </button>
 
           </div>
@@ -99,7 +116,6 @@ function Projects() {
         </div>
 
         {/* Horizontal Scroll (No Images) */}
-
         <div
           ref={sliderRef}
           className="
@@ -107,6 +123,7 @@ function Projects() {
             gap-5 sm:gap-6
             overflow-x-auto
             scroll-smooth
+            pt-1
             pb-3 sm:pb-4
             scrollbar-hide
           "
@@ -144,11 +161,11 @@ function Projects() {
 
               <div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-[#2D3748]">
+                <h3 className="text-lg sm:text-xl font-bold text-[#2D3748] tracking-tight min-h-[3rem] sm:min-h-[3.5rem] flex items-start">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-500 mt-2 sm:mt-2.5 text-xs sm:text-sm leading-relaxed text-justify">
+                <p className="text-gray-600 mt-2 text-xs sm:text-sm leading-relaxed text-left">
                   {project.description}
                 </p>
 
@@ -156,7 +173,7 @@ function Projects() {
 
               <div>
 
-                <div className="flex flex-wrap gap-1.5 mt-3 sm:mt-4">
+                <div className="flex flex-wrap gap-1.5 mt-3 sm:mt-4 min-h-[44px] content-start">
 
                   {project.technologies.map((tech) => (
 
@@ -165,6 +182,8 @@ function Projects() {
                       className="
                         bg-white
                         text-[#57BA98]
+                        border
+                        border-[#57BA98]/20
                         px-2.5
                         py-0.5
                         rounded-full
@@ -180,7 +199,7 @@ function Projects() {
 
                 </div>
 
-                <div className="flex gap-3 mt-4 sm:mt-5">
+                <div className="flex gap-2.5 mt-4 sm:mt-5">
 
                   <a
                     href={project.github}
@@ -198,11 +217,14 @@ function Projects() {
                       justify-center
                       items-center
                       gap-2
-                      hover:bg-[#65CCB8]
-                      transition
+                      hover:bg-[#489F82]
+                      hover:shadow-md
+                      active:scale-[0.98]
+                      transition-all
+                      duration-200
                     "
                   >
-                    <FaGithub />
+                    <FaGithub className="text-sm" />
                     GitHub
                   </a>
 
@@ -213,6 +235,8 @@ function Projects() {
                       rel="noreferrer"
                       className="
                         flex-1
+                        bg-white
+                        text-[#57BA98]
                         border
                         border-[#57BA98]
                         py-2 sm:py-2.5
@@ -223,12 +247,15 @@ function Projects() {
                         justify-center
                         items-center
                         gap-2
-                        hover:bg-white
-                        transition
+                        hover:bg-[#E8F8F3]
+                        hover:shadow-md
+                        active:scale-[0.98]
+                        transition-all
+                        duration-200
                       "
                     >
-                      <FaExternalLinkAlt />
-                      Demo
+                      <FaExternalLinkAlt className="text-xs" />
+                      Live Demo
                     </a>
                   )}
 
@@ -248,4 +275,3 @@ function Projects() {
 }
 
 export default Projects;
-

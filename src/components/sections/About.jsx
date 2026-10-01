@@ -11,7 +11,7 @@ function About() {
   return (
     <section
       id="about"
-      className="py-16 md:py-24 lg:py-28 bg-transparent"
+      className="scroll-mt-20 sm:scroll-mt-24 py-16 md:py-24 lg:py-28 bg-transparent"
     >
       <Container>
 
