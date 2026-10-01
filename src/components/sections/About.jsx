@@ -62,13 +62,11 @@ function About() {
             viewport={{ once: true }}
           >
 
-            <div>
-              <span className="ios-section-badge">
-                About Me
-              </span>
-            </div>
+            <h5 className="text-[#57BA98] font-bold text-sm sm:text-base">
+              ABOUT ME
+            </h5>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-3 text-[#2D3748]">
               {aboutData.subtitle}
             </h2>
 
@@ -76,7 +74,7 @@ function About() {
               {aboutData.description}
             </p>
 
-            <div className="mt-8 ios-glass-card p-5 sm:p-6 space-y-3.5">
+            <div className="mt-8 space-y-4">
 
               {aboutData.points.map((item, index) => (
 
