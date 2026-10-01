@@ -1,116 +1,35 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-  FaChevronLeft,
-  FaChevronRight,
-  FaFolderOpen,
-} from "react-icons/fa";
-
+import { FaGithub, FaExternalLinkAlt, FaFolderOpen } from "react-icons/fa";
 import projects from "../../data/projects";
 import Container from "../common/Container";
 
 function Projects() {
-  const sliderRef = useRef(null);
-
-  const scrollLeft = () => {
-    sliderRef.current?.scrollBy({
-      left: -400,
-      behavior: "smooth",
-    });
-  };
-
-  const scrollRight = () => {
-    sliderRef.current?.scrollBy({
-      left: 400,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section id="projects" className="py-24 bg-transparent">
       <Container>
-        <div className="text-center">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-[#57BA98] font-bold uppercase tracking-wider text-sm">
             My Works
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold mt-2 text-[#2D3748]">
             Featured Projects & Research
           </h2>
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-            A comprehensive list of my research work, full-stack web applications, AI/ML models, and IoT systems.
+          <p className="text-gray-500 mt-4 text-base sm:text-lg">
+            A comprehensive showcase of my 11 projects including research work, full-stack applications, deep learning models, and IoT systems.
           </p>
         </div>
 
-        {/* Navigation Arrows */}
-        <div className="flex justify-end gap-3 mt-10 mb-6">
-          <button
-            onClick={scrollLeft}
-            aria-label="Previous Projects"
-            className="
-              w-11
-              h-11
-              rounded-full
-              bg-[#EDF8F5]
-              text-[#57BA98]
-              shadow
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <FaChevronLeft />
-          </button>
-
-          <button
-            onClick={scrollRight}
-            aria-label="Next Projects"
-            className="
-              w-11
-              h-11
-              rounded-full
-              bg-[#EDF8F5]
-              text-[#57BA98]
-              shadow
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <FaChevronRight />
-          </button>
-        </div>
-
-        {/* Horizontal Scrollable Slider of Cards (No Images) */}
-        <div
-          ref={sliderRef}
-          className="
-            flex
-            gap-6
-            overflow-x-auto
-            scroll-smooth
-            pb-6
-            pt-2
-            scrollbar-hide
-          "
-        >
-          {projects.map((project) => (
+        {/* Responsive Grid Layout showcasing ALL 11 projects cleanly */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              viewport={{ once: true }}
               whileHover={{ y: -8 }}
               className="
-                w-[90vw]
-                sm:w-[340px]
-                md:w-[360px]
-                lg:w-[380px]
-                flex-shrink-0
                 flex flex-col justify-between
                 bg-[#E8F8F3]
                 backdrop-blur-xl
@@ -125,7 +44,7 @@ function Projects() {
               "
             >
               <div>
-                {/* Top Badge & Icon */}
+                {/* Header: Icon & Category Badge */}
                 <div className="flex items-center justify-between gap-2 mb-4">
                   <div className="w-10 h-10 rounded-2xl bg-[#57BA98]/15 text-[#57BA98] flex items-center justify-center text-lg">
                     <FaFolderOpen />
@@ -149,7 +68,7 @@ function Projects() {
               </div>
 
               <div className="mt-6">
-                {/* Technologies */}
+                {/* Tech Badges */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span
@@ -195,7 +114,7 @@ function Projects() {
                     "
                   >
                     <FaGithub className="text-base" />
-                    GitHub
+                    GitHub Repository
                   </a>
 
                   {project.demo && project.demo !== "#" && project.demo !== project.github && (
