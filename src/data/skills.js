@@ -1,37 +1,41 @@
 const skills = [
-   {
-  category: "Cyber Security",
-  items: [
-    "Kali Linux",
-    "Wireshark",
-    "Nmap",
-    "Burp Suite",
-  ],
-},
   {
-    category: "Frontend",
+    category: "AI & Machine Learning",
     items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
+      "Python",
+      "PyTorch",
+      "YOLO",
+      "Transformers",
+      "OpenCV",
+      "Scikit-learn",
+      "Streamlit",
+      "LangChain",
+    ],
+  },
+
+  {
+    category: "Frontend Development",
+    items: [
       "React",
       "Tailwind CSS",
+      "JavaScript",
+      "HTML",
+      "CSS",
     ],
   },
 
   {
-    category: "Backend",
+    category: "Backend Development",
     items: [
+      "Spring Boot",
+      "Flask",
       "Node.js",
       "Express.js",
-      "PHP",
     ],
   },
 
- 
-
   {
-    category: "Database",
+    category: "Databases",
     items: [
       "MySQL",
       "MongoDB",
@@ -39,12 +43,14 @@ const skills = [
   },
 
   {
-    category: "Tools",
+    category: "Tools & Platforms",
     items: [
       "Git",
       "GitHub",
+      "Jupyter Notebook",
       "VS Code",
       "Postman",
+      "Jira",
     ],
   },
 ];

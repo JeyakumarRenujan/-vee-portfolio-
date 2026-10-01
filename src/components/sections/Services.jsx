@@ -5,8 +5,8 @@ import {
   FaLaptopCode,
   FaServer,
   FaDatabase,
+  FaRobot,
   FaMobileAlt,
-  FaShieldAlt,
 } from "react-icons/fa";
 
 import Container from "../common/Container";
@@ -17,8 +17,8 @@ const icons = [
   <FaLaptopCode />,
   <FaServer />,
   <FaDatabase />,
+  <FaRobot />,
   <FaMobileAlt />,
-  <FaShieldAlt />,
 ];
 
 function Services() {

@@ -4,15 +4,13 @@ const aboutData = {
   subtitle: "Computer Engineer",
 
   description:
-    "Computer Engineering undergraduate passionate about Cyber Security and Full Stack Development. I enjoy building secure, scalable, and modern web applications while continuously exploring new technologies and creating innovative solutions to real-world problems.",
+    "Computer Engineering undergraduate passionate about Artificial Intelligence, Machine Learning, and Full Stack Development. I enjoy building intelligent, scalable, and modern applications while continuously exploring cutting-edge technologies to solve real-world problems.",
 
   points: [
-    
-    "Security-First Software Development",
+    "AI & Machine Learning Solutions",
     "Responsive Web Development",
-     "Secure API Design & Implementation",
+    "Deep Learning & NLP Research",
     "Frontend & Backend Development",
-    
     "Database Design",
     "UI/UX Focused Development",
   ],

@@ -3,15 +3,15 @@ const heroData = {
   name: "Varnaja ",
   roles: [
     "Computer Engineer",
-    "Cybersecuirty Enthusiast",
-    "Full Stack Developer",
-    "Technology Explorer",
     "AI/ML Enthusiast",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Technology Explorer",
     "UI Designer",
   ],
   
   description:
-    "I build responsive, scalable and modern web applications using the latest technologies while continuously learning and solving real-world problems.",
+    "I build intelligent, responsive, and scalable modern applications using machine learning and full-stack technologies while continuously solving real-world problems.",
 
   github: "https://github.com/VeeQubit",
   linkedin: "https://www.linkedin.com/in/varnaja01/",

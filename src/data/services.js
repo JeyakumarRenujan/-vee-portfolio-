@@ -2,7 +2,7 @@ const services = [
   {
     title: "AI & Machine Learning",
     description:
-      "Developing intelligent solutions, deep learning models, computer vision systems, and transformer-based NLP architectures.",
+      "Developing intelligent solutions, predictive models, and deep learning algorithms to solve complex real-world challenges.",
   },
 
   {
@@ -14,7 +14,7 @@ const services = [
   {
     title: "Backend Development",
     description:
-      "Developing secure server-side applications and RESTful APIs using Node.js and Express.",
+      "Developing robust server-side applications, microservices, and RESTful APIs using Node.js, Express, and Spring Boot.",
   },
 
   {
@@ -24,15 +24,15 @@ const services = [
   },
 
   {
-    title: "Responsive Web Design",
+    title: "Computer Vision & NLP",
     description:
-      "Creating websites that work seamlessly across desktop, tablet and mobile devices.",
+      "Designing deep learning pipelines with YOLO, PyTorch, and transformer models for object detection and language understanding.",
   },
 
   {
-    title: "Cyber Security",
+    title: "Responsive Web Design",
     description:
-      "Applying security best practices to identify vulnerabilities, protect applications, and strengthen system security through ethical hacking and defensive techniques.",
+      "Creating intuitive websites and applications that work seamlessly across desktop, tablet, and mobile devices.",
   },
 ];
 

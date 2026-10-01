@@ -19,10 +19,10 @@ function Footer() {
           </h2>
 
           <p className="text-gray-400 mt-3">
-            Cybersecurity Enthusiast | Computer Engineer
+            AI/ML & Software Engineer | Computer Engineering
           </p>
 
-          <div className="flex justify-center gap-8 mt-8">
+          <div className="flex justify-center gap-8 mt-8 flex-wrap">
 
             <a
               href="#home"
@@ -36,6 +36,13 @@ function Footer() {
               className="hover:text-[#65CCB8] transition duration-300"
             >
               About
+            </a>
+
+            <a
+              href="#research"
+              className="hover:text-[#65CCB8] transition duration-300"
+            >
+              Research
             </a>
 
             <a
