@@ -1,29 +1,8 @@
-
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
 import experience from "../../data/experience";
 import Container from "../common/Container";
 
 function Experience() {
-
-  const sliderRef = useRef(null);
-
-  const scrollLeft = () => {
-    sliderRef.current?.scrollBy({
-      left: -340,
-      behavior: "smooth",
-    });
-  };
-
-  const scrollRight = () => {
-    sliderRef.current?.scrollBy({
-      left: 340,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section
       id="experience"
@@ -49,67 +28,9 @@ function Experience() {
 
         </div>
 
-        {/* Arrow Buttons */}
+        {/* Cards - Centered 2-Column Grid */}
 
-        <div className="flex justify-end gap-3 mb-6">
-
-          <button
-            onClick={scrollLeft}
-            aria-label="Previous Experience"
-            className="
-              w-10 sm:w-11
-              h-10 sm:h-11
-              rounded-full
-              bg-[#E8F8F3]
-              text-[#57BA98]
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-              duration-300
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <FaChevronLeft />
-          </button>
-
-          <button
-            onClick={scrollRight}
-            aria-label="Next Experience"
-            className="
-              w-10 sm:w-11
-              h-10 sm:h-11
-              rounded-full
-              bg-[#E8F8F3]
-              text-[#57BA98]
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-              duration-300
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <FaChevronRight />
-          </button>
-
-        </div>
-
-        {/* Cards */}
-
-        <div
-          ref={sliderRef}
-          className="
-            flex
-            gap-6
-            overflow-x-auto
-            scroll-smooth
-            pb-4
-            scrollbar-hide
-          "
-        >
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
 
           {experience.map((item, index) => (
 
@@ -123,55 +44,53 @@ function Experience() {
                 y: -8,
               }}
               className="
-                relative
-                w-[85vw]
-                sm:w-[340px]
-                md:w-[360px]
-                lg:w-[380px]
-
-                min-h-[300px]
                 bg-white/70
                 backdrop-blur-md
                 rounded-3xl
                 shadow-lg
-                p-6 sm:p-7
+                p-6 sm:p-8
                 border-l-4
                 border-[#57BA98]
                 border
                 border-white/40
-                flex-shrink-0
+                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+                transition-all
+                duration-300
+                flex
+                flex-col
+                justify-between
               "
             >
 
-              <span
-                className="
-                  absolute
-                  -left-3
-                  top-8
-                  w-5
-                  h-5
-                  rounded-full
-                  bg-[#57BA98]
-                "
-              ></span>
+              <div>
 
-              <p className="text-[#57BA98] font-semibold">
-                {item.duration}
-              </p>
+                {/* Duration with timeline badge */}
 
-              <h3 className="text-xl font-bold mt-2 text-[#2D3748]">
-                {item.position}
-              </h3>
+                <div className="flex items-center gap-2 mb-3">
 
-              <h4 className="text-base text-gray-600 mt-1">
-                {item.company}
-              </h4>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#57BA98] ring-4 ring-[#E8F8F3]"></span>
 
-              <p className="text-gray-500 mt-4 sm:mt-6 leading-7 sm:leading-8 text-sm sm:text-base text-justify">
-                {item.description}
-              </p>
+                  <span className="text-[#57BA98] font-semibold text-sm">
+                    {item.duration}
+                  </span>
 
-              <div className="flex flex-wrap gap-2 mt-5 sm:mt-6">
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-bold text-[#2D3748]">
+                  {item.position}
+                </h3>
+
+                <h4 className="text-base text-gray-600 mt-1 font-medium">
+                  {item.company}
+                </h4>
+
+                <p className="text-gray-500 mt-4 leading-7 text-sm sm:text-base">
+                  {item.description}
+                </p>
+
+              </div>
+
+              <div className="flex flex-wrap gap-2 mt-6 pt-5 border-t border-[#57BA98]/15">
 
                 {item.skills.map((skill) => (
 
@@ -210,4 +129,3 @@ function Experience() {
 }
 
 export default Experience;
-
