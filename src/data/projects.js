@@ -12,8 +12,8 @@ const projects = [
       "Java",
       "Agile Scrum",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/GowthamJegatheeswaran/ERMS-Backend",
+    demo: "https://github.com/GowthamJegatheeswaran/ERMS-Backend",
   },
   {
     id: 2,
@@ -29,8 +29,8 @@ const projects = [
       "MySQL",
       "JWT",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/VeeQubit/artisan-gallery",
+    demo: "https://github.com/VeeQubit/artisan-gallery",
   },
   {
     id: 3,
@@ -46,8 +46,8 @@ const projects = [
       "Express.js",
       "HCI",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/VeeQubit/Multi-Client-Task-Management-Platform-Designed-for-Freelancers",
+    demo: "https://github.com/VeeQubit/Multi-Client-Task-Management-Platform-Designed-for-Freelancers",
   },
   {
     id: 4,
@@ -62,8 +62,8 @@ const projects = [
       "Express.js",
       "Socket.IO",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/VeeQubit/Linkzo-live",
+    demo: "https://github.com/VeeQubit/Linkzo-live",
   },
   {
     id: 5,
@@ -78,8 +78,8 @@ const projects = [
       "Sensors",
       "Embedded C++",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/JeyakumarRenujan/Dam_Safety_System",
+    demo: "https://github.com/JeyakumarRenujan/Dam_Safety_System",
   },
   {
     id: 6,
@@ -94,8 +94,8 @@ const projects = [
       "Computer Vision",
       "Streamlit",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/VeeQubit/electronic-waste-detection-and-classification-for-automated-recycling-system-",
+    demo: "https://github.com/VeeQubit/electronic-waste-detection-and-classification-for-automated-recycling-system-",
   },
   {
     id: 7,
@@ -109,8 +109,8 @@ const projects = [
       "OS Concepts",
       "Data Structures",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/VeeQubit/CPU_Process_Scheduler",
+    demo: "https://github.com/VeeQubit/CPU_Process_Scheduler",
   },
   {
     id: 8,
@@ -124,26 +124,11 @@ const projects = [
       "Express.js",
       "MySQL",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/VeeQubit/Lab_Rescheduling_DBMS",
+    demo: "https://github.com/VeeQubit/Lab_Rescheduling_DBMS",
   },
   {
     id: 9,
-    title: "Course Registration System",
-    type: "Web Application",
-    description:
-      "Academic course registration platform enabling students to enroll in modules, view course timetables, track prerequisites, and calculate earned credits.",
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "MySQL",
-      "HTML/CSS",
-    ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
-  },
-  {
-    id: 10,
     title: "Modern Personal Portfolio Website",
     type: "Web Application",
     description:
@@ -154,8 +139,8 @@ const projects = [
       "Framer Motion",
       "Vite",
     ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
+    github: "https://github.com/VeeQubit/vee-portfolio",
+    demo: "https://github.com/VeeQubit/vee-portfolio",
   },
 ];
 
