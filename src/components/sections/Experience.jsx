@@ -6,13 +6,13 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="py-16 md:py-24 bg-transparent scroll-mt-20"
+      className="pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent scroll-mt-20 sm:scroll-mt-24"
     >
       <Container>
 
         {/* Section Heading */}
 
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-5 sm:mb-6">
 
           <div>
             <span className="ios-section-badge">
@@ -24,7 +24,7 @@ function Experience() {
             Professional Journey
           </h2>
 
-          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base max-w-2xl mx-auto">
             My internship and professional development experience.
           </p>
 
@@ -32,7 +32,7 @@ function Experience() {
 
         {/* Cards - Centered 2-Column Grid */}
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-5 sm:gap-6">
 
           {experience.map((item, index) => (
 
@@ -47,7 +47,7 @@ function Experience() {
               }}
               className="
                 ios-glass-card
-                p-6 sm:p-8
+                p-5 sm:p-6
                 flex
                 flex-col
                 justify-between
@@ -58,7 +58,7 @@ function Experience() {
 
                 {/* Duration with timeline badge */}
 
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center gap-2 mb-2.5">
 
                   <span className="ios-pill-tag px-3 py-1 text-xs sm:text-sm font-semibold">
                     {item.duration}
@@ -70,17 +70,17 @@ function Experience() {
                   {item.position}
                 </h3>
 
-                <h4 className="text-base text-gray-600 mt-1 font-medium">
+                <h4 className="text-sm sm:text-base text-gray-600 mt-1 font-medium">
                   {item.company}
                 </h4>
 
-                <p className="text-gray-500 mt-4 leading-7 text-sm sm:text-base">
+                <p className="text-gray-500 mt-2.5 sm:mt-3 leading-relaxed sm:leading-7 text-sm sm:text-base">
                   {item.description}
                 </p>
 
               </div>
 
-              <div className="flex flex-wrap gap-2 mt-6 pt-5 border-t border-[#57BA98]/15">
+              <div className="flex flex-wrap gap-2 mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-[#57BA98]/15">
 
                 {item.skills.map((skill) => (
 

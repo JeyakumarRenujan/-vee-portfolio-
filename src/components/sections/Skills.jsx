@@ -8,7 +8,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="py-16 md:py-24 bg-transparent scroll-mt-20"
+      className="pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent scroll-mt-20 sm:scroll-mt-24"
     >
       <Container>
 
@@ -24,13 +24,13 @@ function Skills() {
             Technologies I Work With
           </h2>
 
-          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base max-w-2xl mx-auto">
             Modern technologies used for building full stack applications and AI/ML solutions.
           </p>
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mt-12 sm:mt-16">
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-5 mt-5 sm:mt-6">
 
           {skills.map((group, index) => (
 
@@ -46,16 +46,16 @@ function Skills() {
               }}
               className="
                 ios-glass-card
-                p-6 sm:p-8
+                p-4.5 sm:p-5 lg:p-6
               "
             >
 
-              <h3 className="text-xl sm:text-2xl font-bold mb-5 sm:mb-6 text-[#2D3748] flex items-center gap-2.5">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-[#2D3748] flex items-center gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-[#57BA98]"></span>
                 {group.category}
               </h3>
 
-              <div className="flex flex-wrap gap-2.5 sm:gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-2.5">
 
                 {group.items.map((item) => (
 
@@ -63,8 +63,8 @@ function Skills() {
                     key={item}
                     className="
                       ios-pill-tag
-                      px-3.5 sm:px-4.5
-                      py-1.5 sm:py-2
+                      px-3 sm:px-3.5
+                      py-1 sm:py-1.5
                       text-xs sm:text-sm
                     "
                   >

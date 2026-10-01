@@ -4,10 +4,10 @@ import Container from "../common/Container";
 
 function Research() {
   return (
-    <section id="research" className="py-16 md:py-24 bg-transparent scroll-mt-20">
+    <section id="research" className="pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent scroll-mt-20 sm:scroll-mt-24">
       <Container>
         {/* Section Heading */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-5 sm:mb-6">
           <div>
             <span className="ios-section-badge">
               Research
@@ -18,7 +18,7 @@ function Research() {
             Research Project
           </h2>
 
-          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base max-w-2xl mx-auto">
             Academic research in natural language processing and deep learning.
           </p>
         </div>
@@ -35,10 +35,10 @@ function Research() {
               whileHover={{ y: -6 }}
               className="
                 ios-glass-card
-                p-6 sm:p-8 md:p-10
+                p-5 sm:p-6 md:p-7
               "
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#57BA98]/20 pb-5 mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#57BA98]/20 pb-3.5 mb-4 sm:mb-5">
                 <h3 className="text-xl sm:text-2xl font-bold text-[#2D3748]">
                   {item.title}
                 </h3>
@@ -48,7 +48,7 @@ function Research() {
                 </span>
               </div>
 
-              <ul className="space-y-4 text-gray-600 text-sm sm:text-base leading-7 sm:leading-8">
+              <ul className="space-y-2.5 sm:space-y-3 text-gray-600 text-sm sm:text-base leading-6 sm:leading-7">
                 {item.bullets.map((bullet, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="text-[#57BA98] font-bold text-lg leading-none mt-0.5">•</span>
@@ -57,7 +57,7 @@ function Research() {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 mt-8 pt-6 border-t border-[#57BA98]/20">
+              <div className="flex flex-wrap gap-2 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-[#57BA98]/20">
                 {item.technologies.map((tech) => (
                   <span
                     key={tech}

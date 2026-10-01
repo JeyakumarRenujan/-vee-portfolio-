@@ -40,11 +40,11 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-[calc(100vh-5rem)] flex flex-col justify-center py-6 sm:py-8 lg:py-10 bg-transparent scroll-mt-20"
+      className="pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent scroll-mt-20 sm:scroll-mt-24"
     >
       <Container>
 
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-5 sm:mb-6">
 
           <div>
             <span className="ios-section-badge">
@@ -52,11 +52,11 @@ function Contact() {
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 text-[#2D3748]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1.5 text-[#2D3748]">
             Get In Touch
           </h2>
 
-          <p className="text-gray-500 mt-1 sm:mt-1.5 text-xs sm:text-sm max-w-xl mx-auto">
+          <p className="text-gray-500 mt-1.5 text-xs sm:text-sm max-w-xl mx-auto">
             Have a project or opportunity? Feel free to contact me.
           </p>
 

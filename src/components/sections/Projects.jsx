@@ -30,11 +30,11 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="scroll-mt-20 py-8 sm:py-10 md:py-12 bg-transparent"
+      className="pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent scroll-mt-20 sm:scroll-mt-24"
     >
       <Container>
 
-        <div className="relative text-center mb-8 sm:mb-10 md:mb-12">
+        <div className="relative text-center mb-5 sm:mb-6">
 
           <div>
             <span className="ios-section-badge">

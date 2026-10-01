@@ -6,7 +6,7 @@ function TechStack() {
   return (
     <section
       id="tech"
-      className="relative py-16 md:py-24 bg-transparent overflow-hidden"
+      className="relative pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent overflow-hidden scroll-mt-20 sm:scroll-mt-24"
     >
       {/* Background Glow */}
 
@@ -48,26 +48,26 @@ function TechStack() {
               Tools & Technologies
             </h2>
 
-            <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+            <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base max-w-2xl mx-auto">
               Technologies I use to build modern applications.
             </p>
 
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 sm:gap-6 mt-12 sm:mt-16">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 mt-6 sm:mt-8">
 
             {techStack.map((tech) => (
 
               <motion.div
                 key={tech}
                 whileHover={{
-                  y: -6,
-                  scale: 1.04,
+                  y: -5,
+                  scale: 1.03,
                 }}
                 className="
                   ios-glass-card
                   rounded-2xl
-                  p-4 sm:p-5
+                  p-3.5 sm:p-4
                   text-center
                 "
               >

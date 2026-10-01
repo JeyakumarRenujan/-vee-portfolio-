@@ -29,11 +29,11 @@ function Education() {
   return (
     <section
       id="education"
-      className="py-16 md:py-24 bg-transparent scroll-mt-20"
+      className="pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent scroll-mt-20 sm:scroll-mt-24"
     >
       <Container>
 
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-5 sm:mb-6">
 
           <div>
             <span className="ios-section-badge">
@@ -45,7 +45,7 @@ function Education() {
             Academic Journey
           </h2>
 
-          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base max-w-2xl mx-auto">
             My educational background and academic qualifications.
           </p>
 
@@ -59,27 +59,27 @@ function Education() {
           viewport={{ once: true }}
         >
 
-          <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <div className="flex justify-between items-center mb-4 sm:mb-5">
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5">
 
-              <FaGraduationCap className="text-[#57BA98] text-2xl sm:text-3xl" />
+              <FaGraduationCap className="text-[#57BA98] text-xl sm:text-2xl" />
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#2D3748]">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#2D3748]">
                 Education
               </h3>
 
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-2.5">
 
               <button
                 onClick={() => scrollLeft(educationRef)}
                 aria-label="Previous Education"
                 className="
                   ios-glossy-icon-btn
-                  w-10 sm:w-11
-                  h-10 sm:h-11
+                  w-9 sm:w-10
+                  h-9 sm:h-10
                   rounded-full
                 "
               >
@@ -91,8 +91,8 @@ function Education() {
                 aria-label="Next Education"
                 className="
                   ios-glossy-icon-btn
-                  w-10 sm:w-11
-                  h-10 sm:h-11
+                  w-9 sm:w-10
+                  h-9 sm:h-10
                   rounded-full
                 "
               >
@@ -107,9 +107,9 @@ function Education() {
             ref={educationRef}
             className="
               flex
-              gap-6
+              gap-5 sm:gap-6
               overflow-x-auto
-              pb-4
+              pb-3
               scroll-smooth
               scrollbar-hide
             "
@@ -121,13 +121,13 @@ function Education() {
                 key={index}
                 className="
                   w-[85vw]
-                  sm:w-[320px]
-                  md:w-[340px]
+                  sm:w-[310px]
+                  md:w-[330px]
                   lg:w-[340px]
-                  min-h-[240px]
+                  min-h-[190px]
                   flex-shrink-0
                   ios-glass-card
-                  p-6 sm:p-8
+                  p-5 sm:p-6
                   flex
                   flex-col
                   justify-between
@@ -136,21 +136,21 @@ function Education() {
 
                 <div>
 
-                  <h4 className="text-xl sm:text-2xl font-bold text-[#2D3748]">
+                  <h4 className="text-lg sm:text-xl font-bold text-[#2D3748]">
                     {item.degree}
                   </h4>
 
-                  <p className="mt-3 text-[#57BA98] font-semibold text-sm sm:text-base">
+                  <p className="mt-2 text-[#57BA98] font-semibold text-xs sm:text-sm">
                     {item.institution}
                   </p>
 
-                  <p className="mt-1 text-gray-600 text-sm sm:text-base">
+                  <p className="mt-1 text-gray-600 text-xs sm:text-sm">
                     {item.faculty}
                   </p>
 
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-3.5">
                   <span className="ios-pill-tag px-3 py-1 text-xs font-semibold">
                     {item.duration}
                   </span>

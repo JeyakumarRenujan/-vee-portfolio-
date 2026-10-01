@@ -25,7 +25,7 @@ function Services() {
   return (
     <section
       id="services"
-      className="relative py-16 md:py-24 bg-transparent overflow-hidden scroll-mt-20"
+      className="relative pt-4 sm:pt-6 lg:pt-6 pb-12 sm:pb-16 bg-transparent overflow-hidden scroll-mt-20 sm:scroll-mt-24"
     >
       <Container>
 
@@ -41,7 +41,7 @@ function Services() {
             Areas of Expertise
           </h2>
 
-          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base max-w-2xl mx-auto">
             Technologies and solutions I enjoy building.
           </p>
 
@@ -73,32 +73,32 @@ function Services() {
 
         {/* Cards */}
 
-        <div className="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
+        <div className="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-6 sm:mt-8">
 
           {services.map((service, index) => (
 
             <motion.div
               key={index}
               whileHover={{
-                y: -8,
-                scale: 1.02,
+                y: -6,
+                scale: 1.01,
               }}
               className="
                 ios-glass-card
-                p-6 sm:p-8
+                p-5 sm:p-6
                 text-center
               "
             >
 
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-white/80 border border-[#57BA98]/30 shadow-[inset_0_1px_1.5px_rgba(255,255,255,1),0_4px_12px_rgba(87,186,152,0.12)] text-2xl sm:text-3xl text-[#57BA98] mb-5 sm:mb-6 flex items-center justify-center">
+              <div className="w-13 h-13 sm:w-14 sm:h-14 mx-auto rounded-2xl bg-white/80 border border-[#57BA98]/30 shadow-[inset_0_1px_1.5px_rgba(255,255,255,1),0_4px_12px_rgba(87,186,152,0.12)] text-2xl sm:text-3xl text-[#57BA98] mb-3.5 sm:mb-4 flex items-center justify-center">
                 {icons[index]}
               </div>
 
-              <h3 className="text-lg sm:text-xl font-bold text-[#2D3748]">
+              <h3 className="text-base sm:text-lg font-bold text-[#2D3748]">
                 {service.title}
               </h3>
 
-              <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base leading-6 sm:leading-7">
+              <p className="text-gray-500 mt-2 sm:mt-2.5 text-xs sm:text-sm leading-relaxed sm:leading-6">
                 {service.description}
               </p>
 
