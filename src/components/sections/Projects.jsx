@@ -30,72 +30,71 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 md:py-24 bg-transparent"
+      className="py-8 sm:py-10 md:py-12 bg-transparent"
     >
       <Container>
 
-        <div className="text-center">
+        <div className="relative text-center mb-4 sm:mb-5">
 
-          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
+          <p className="text-[#57BA98] font-bold uppercase text-xs sm:text-sm tracking-wider">
             My Works
           </p>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 text-[#2D3748]">
             Featured Projects
           </h2>
 
-          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm max-w-2xl mx-auto">
             Some of my projects that demonstrate my technical skills and practical
             experience.
           </p>
 
-        </div>
+          {/* Arrow Buttons - absolute on the right for sm+, inline on mobile */}
+          <div className="flex justify-center sm:justify-end sm:absolute sm:right-0 sm:bottom-0 gap-2.5 mt-3 sm:mt-0">
 
-        {/* Arrow Buttons */}
+            <button
+              onClick={scrollLeft}
+              aria-label="Previous Project"
+              className="
+                w-9 sm:w-10
+                h-9 sm:h-10
+                rounded-full
+                bg-[#EDF8F5]
+                text-[#57BA98]
+                shadow-sm
+                hover:bg-[#57BA98]
+                hover:text-white
+                transition
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <FaChevronLeft className="mx-auto text-sm" />
+            </button>
 
-        <div className="flex justify-end gap-3 mt-8 sm:mt-10 mb-6">
+            <button
+              onClick={scrollRight}
+              aria-label="Next Project"
+              className="
+                w-9 sm:w-10
+                h-9 sm:h-10
+                rounded-full
+                bg-[#EDF8F5]
+                text-[#57BA98]
+                shadow-sm
+                hover:bg-[#57BA98]
+                hover:text-white
+                transition
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <FaChevronRight className="mx-auto text-sm" />
+            </button>
 
-          <button
-            onClick={scrollLeft}
-            aria-label="Previous Project"
-            className="
-              w-10 sm:w-11
-              h-10 sm:h-11
-              rounded-full
-              bg-[#EDF8F5]
-              text-[#57BA98]
-              shadow
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <FaChevronLeft className="mx-auto" />
-          </button>
-
-          <button
-            onClick={scrollRight}
-            aria-label="Next Project"
-            className="
-              w-10 sm:w-11
-              h-10 sm:h-11
-              rounded-full
-              bg-[#EDF8F5]
-              text-[#57BA98]
-              shadow
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <FaChevronRight className="mx-auto" />
-          </button>
+          </div>
 
         </div>
 
@@ -105,10 +104,10 @@ function Projects() {
           ref={sliderRef}
           className="
             flex
-            gap-6 sm:gap-8
+            gap-5 sm:gap-6
             overflow-x-auto
             scroll-smooth
-            pb-6
+            pb-3 sm:pb-4
             scrollbar-hide
           "
         >
@@ -118,38 +117,38 @@ function Projects() {
             <motion.div
               key={project.id}
               whileHover={{
-                y: -10,
+                y: -6,
               }}
               className="
                 w-[85vw]
-                sm:w-[340px]
-                md:w-[360px]
-                lg:w-[380px]
+                sm:w-[330px]
+                md:w-[350px]
+                lg:w-[360px]
                 flex-shrink-0
                 bg-[#E8F8F3]
                 backdrop-blur-xl
-                rounded-3xl
-                shadow-lg
+                rounded-2xl sm:rounded-3xl
+                shadow-md
                 border
                 border-[#E8F8F3]
-                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-                hover:-translate-y-2
+                hover:shadow-[0_12px_28px_rgba(87,186,152,0.18)]
+                hover:-translate-y-1.5
                 transition-all
                 duration-300
                 flex
                 flex-col
                 justify-between
-                p-6 sm:p-7
+                p-5 sm:p-6
               "
             >
 
               <div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-[#2D3748]">
+                <h3 className="text-lg sm:text-xl font-bold text-[#2D3748]">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-500 mt-2 sm:mt-2.5 text-xs sm:text-sm leading-relaxed text-justify">
                   {project.description}
                 </p>
 
@@ -157,7 +156,7 @@ function Projects() {
 
               <div>
 
-                <div className="flex flex-wrap gap-2 mt-6">
+                <div className="flex flex-wrap gap-1.5 mt-3 sm:mt-4">
 
                   {project.technologies.map((tech) => (
 
@@ -166,10 +165,12 @@ function Projects() {
                       className="
                         bg-white
                         text-[#57BA98]
-                        px-3
-                        py-1
+                        px-2.5
+                        py-0.5
                         rounded-full
-                        text-sm
+                        text-xs
+                        font-medium
+                        shadow-xs
                       "
                     >
                       {tech}
@@ -179,7 +180,7 @@ function Projects() {
 
                 </div>
 
-                <div className="flex gap-4 mt-8">
+                <div className="flex gap-3 mt-4 sm:mt-5">
 
                   <a
                     href={project.github}
@@ -189,8 +190,10 @@ function Projects() {
                       flex-1
                       bg-[#57BA98]
                       text-white
-                      py-3
+                      py-2 sm:py-2.5
                       rounded-xl
+                      text-xs sm:text-sm
+                      font-medium
                       flex
                       justify-center
                       items-center
@@ -212,8 +215,10 @@ function Projects() {
                         flex-1
                         border
                         border-[#57BA98]
-                        py-3
+                        py-2 sm:py-2.5
                         rounded-xl
+                        text-xs sm:text-sm
+                        font-medium
                         flex
                         justify-center
                         items-center
