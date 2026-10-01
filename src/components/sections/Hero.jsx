@@ -58,45 +58,33 @@ function Hero() {
             <div className="flex flex-wrap gap-5 mt-10">
 
               <a
-  href="#contact"
-  className="
-    bg-[#57BA98]
-    text-white
-    px-7
-    py-3
-    rounded-xl
-    shadow-lg
-    hover:bg-[#65CCB8]
-    hover:scale-105
-    transition
-    duration-300
-    inline-flex
-    items-center
-    justify-center
-  "
->
-  Hire Me
-</a>
+                href="#contact"
+                className="
+                  ios-glossy-button
+                  text-white
+                  px-8
+                  py-3.5
+                  rounded-full
+                  font-semibold
+                  text-sm sm:text-base
+                "
+              >
+                <span className="relative z-10">Hire Me</span>
+              </a>
 
               <a
-  href="#projects"
-  className="
-    border-2
-    border-[#57BA98]
-    px-7
-    py-3
-    rounded-xl
-    hover:bg-[#E8F8F3]
-    hover:scale-105
-    transition
-    duration-300
-    inline-flex
-    items-center
-    justify-center
-  "
->
-  View Projects
-</a>
+                href="#projects"
+                className="
+                  ios-glossy-btn-secondary
+                  px-8
+                  py-3.5
+                  rounded-full
+                  font-semibold
+                  text-sm sm:text-base
+                "
+              >
+                <span className="relative z-10">View Projects</span>
+              </a>
 
             </div>
 

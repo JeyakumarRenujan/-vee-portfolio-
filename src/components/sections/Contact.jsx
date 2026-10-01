@@ -216,20 +216,17 @@ function Contact() {
               <button
                 type="submit"
                 className="
-                  bg-[#57BA98]
-                  hover:bg-[#65CCB8]
-                  hover:scale-105
-                  transition
-                  duration-300
+                  ios-glossy-button
+                  w-full
                   text-white
                   px-8
-                  py-3
-                  rounded-xl
-                  shadow-lg
-                  w-full
+                  py-3.5
+                  rounded-full
+                  text-sm sm:text-base
+                  font-semibold
                 "
               >
-                Send Message
+                <span className="relative z-10">Send Message</span>
               </button>
 
             </form>

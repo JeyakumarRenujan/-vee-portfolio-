@@ -56,42 +56,26 @@ function Projects() {
               onClick={scrollLeft}
               aria-label="Previous Project"
               className="
+                ios-glossy-icon-btn
                 w-9 sm:w-10
                 h-9 sm:h-10
                 rounded-full
-                bg-[#EDF8F5]
-                text-[#57BA98]
-                shadow-sm
-                hover:bg-[#57BA98]
-                hover:text-white
-                transition
-                flex
-                items-center
-                justify-center
               "
             >
-              <FaChevronLeft className="mx-auto text-sm" />
+              <FaChevronLeft className="relative z-10 text-sm" />
             </button>
 
             <button
               onClick={scrollRight}
               aria-label="Next Project"
               className="
+                ios-glossy-icon-btn
                 w-9 sm:w-10
                 h-9 sm:h-10
                 rounded-full
-                bg-[#EDF8F5]
-                text-[#57BA98]
-                shadow-sm
-                hover:bg-[#57BA98]
-                hover:text-white
-                transition
-                flex
-                items-center
-                justify-center
               "
             >
-              <FaChevronRight className="mx-auto text-sm" />
+              <FaChevronRight className="relative z-10 text-sm" />
             </button>
 
           </div>
@@ -187,23 +171,19 @@ function Projects() {
                     target="_blank"
                     rel="noreferrer"
                     className="
+                      ios-glossy-button
                       flex-1
-                      bg-[#57BA98]
                       text-white
                       py-2 sm:py-2.5
-                      rounded-xl
+                      rounded-full
                       text-xs sm:text-sm
-                      font-medium
-                      flex
-                      justify-center
-                      items-center
-                      gap-2
-                      hover:bg-[#65CCB8]
-                      transition
+                      font-semibold
                     "
                   >
-                    <FaGithub />
-                    GitHub
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      <FaGithub />
+                      GitHub
+                    </span>
                   </a>
 
                   {project.demo && project.demo !== "#" && project.demo !== project.github && (
@@ -212,23 +192,18 @@ function Projects() {
                       target="_blank"
                       rel="noreferrer"
                       className="
+                        ios-glossy-btn-secondary
                         flex-1
-                        border
-                        border-[#57BA98]
                         py-2 sm:py-2.5
-                        rounded-xl
+                        rounded-full
                         text-xs sm:text-sm
-                        font-medium
-                        flex
-                        justify-center
-                        items-center
-                        gap-2
-                        hover:bg-white
-                        transition
+                        font-semibold
                       "
                     >
-                      <FaExternalLinkAlt />
-                      Demo
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        <FaExternalLinkAlt />
+                        Demo
+                      </span>
                     </a>
                   )}
 

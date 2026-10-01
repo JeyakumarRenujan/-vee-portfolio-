@@ -94,27 +94,25 @@ function About() {
             </div>
 
             
-<a
-  href="/resume/Varnaja_Uthayaraj_CV.pdf"
-  download
-  className="
-    inline-block
-    mt-8 sm:mt-10
-    bg-[#57BA98]
-    text-white
-    px-6 sm:px-8
-    py-2.5 sm:py-3
-    text-sm sm:text-base
-    font-medium
-    rounded-xl
-    hover:bg-[#65CCB8]
-    transition
-    duration-300
-    shadow-md
-  "
->
-  Download CV
-</a>
+            <a
+              href="/resume/Varnaja_Uthayaraj_CV.pdf"
+              download
+              className="
+                ios-glossy-button
+                inline-flex
+                items-center
+                justify-center
+                mt-8 sm:mt-10
+                text-white
+                px-8 sm:px-9
+                py-3 sm:py-3.5
+                text-sm sm:text-base
+                font-semibold
+                rounded-full
+              "
+            >
+              <span className="relative z-10">Download CV</span>
+            </a>
 
 
 

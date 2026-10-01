@@ -1,16 +1,9 @@
 function ResumeButton() {
   return (
     <button
-      style={{
-        background: "var(--primary)",
-        color: "white",
-        border: "none",
-        padding: "10px 18px",
-        borderRadius: "8px",
-        fontWeight: "600",
-      }}
+      className="ios-glossy-button text-white px-5 py-2.5 rounded-full font-semibold text-sm"
     >
-      Resume
+      <span className="relative z-10">Resume</span>
     </button>
   );
 }

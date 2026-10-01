@@ -75,42 +75,26 @@ function Education() {
                 onClick={() => scrollLeft(educationRef)}
                 aria-label="Previous Education"
                 className="
+                  ios-glossy-icon-btn
                   w-10 sm:w-11
                   h-10 sm:h-11
                   rounded-full
-                  bg-[#EDF8F5]
-                  text-[#57BA98]
-                  shadow
-                  hover:bg-[#57BA98]
-                  hover:text-white
-                  transition
-                  flex
-                  items-center
-                  justify-center
                 "
               >
-                <FaChevronLeft className="mx-auto" />
+                <FaChevronLeft className="relative z-10" />
               </button>
 
               <button
                 onClick={() => scrollRight(educationRef)}
                 aria-label="Next Education"
                 className="
+                  ios-glossy-icon-btn
                   w-10 sm:w-11
                   h-10 sm:h-11
                   rounded-full
-                  bg-[#EDF8F5]
-                  text-[#57BA98]
-                  shadow
-                  hover:bg-[#57BA98]
-                  hover:text-white
-                  transition
-                  flex
-                  items-center
-                  justify-center
                 "
               >
-                <FaChevronRight className="mx-auto" />
+                <FaChevronRight className="relative z-10" />
               </button>
 
             </div>

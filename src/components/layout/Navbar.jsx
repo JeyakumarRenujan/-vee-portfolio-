@@ -137,21 +137,14 @@ function Navbar() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle Navigation Menu"
               className="
+                ios-glossy-icon-btn
                 w-9 h-9
                 rounded-full
-                bg-white/70
-                text-[#57BA98]
-                border border-[#57BA98]/30
-                shadow-xs
-                hover:bg-[#57BA98]
-                hover:text-white
-                transition-colors
-                flex items-center justify-center
                 text-base
                 cursor-pointer
               "
             >
-              {menuOpen ? <FaTimes /> : <FaBars />}
+              <span className="relative z-10">{menuOpen ? <FaTimes /> : <FaBars />}</span>
             </button>
           </div>
         </nav>
