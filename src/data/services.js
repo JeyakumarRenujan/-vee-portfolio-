@@ -1,9 +1,8 @@
-
 const services = [
   {
-  title: "Cyber Security",
-  description:
-    "Applying security best practices to identify vulnerabilities, protect applications, and strengthen system security through ethical hacking and defensive techniques.",
+    title: "AI & Machine Learning",
+    description:
+      "Developing intelligent solutions, deep learning models, computer vision systems, and transformer-based NLP architectures.",
   },
 
   {
@@ -29,7 +28,12 @@ const services = [
     description:
       "Creating websites that work seamlessly across desktop, tablet and mobile devices.",
   },
+
+  {
+    title: "Cyber Security",
+    description:
+      "Applying security best practices to identify vulnerabilities, protect applications, and strengthen system security through ethical hacking and defensive techniques.",
+  },
 ];
 
 export default services;
-

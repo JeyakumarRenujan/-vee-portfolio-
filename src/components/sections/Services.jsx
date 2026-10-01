@@ -1,22 +1,24 @@
 
 import { motion } from "framer-motion";
 import {
-  FaShieldAlt,
+  FaBrain,
   FaLaptopCode,
   FaServer,
   FaDatabase,
   FaMobileAlt,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 import Container from "../common/Container";
 import services from "../../data/services";
 
 const icons = [
-  <FaShieldAlt />,
+  <FaBrain />,
   <FaLaptopCode />,
   <FaServer />,
   <FaDatabase />,
   <FaMobileAlt />,
+  <FaShieldAlt />,
 ];
 
 function Services() {
@@ -65,7 +67,7 @@ function Services() {
 
         {/* Cards */}
 
-        <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <div className="relative grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
           {services.map((service, index) => (
 
