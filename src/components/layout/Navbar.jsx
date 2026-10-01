@@ -39,20 +39,16 @@ function Navbar() {
   return (
     <header className="fixed top-3 sm:top-4 left-0 right-0 z-50 pointer-events-none">
       <Container>
-        {/* Floating Glossy iOS Pill aligned with content */}
+        {/* Floating Glossy iOS Liquid Glass Pill */}
         <nav
           className="
+            ios-glass-pill
             pointer-events-auto
             w-full
             h-14 sm:h-16
             px-4 sm:px-6
             flex items-center justify-between
             rounded-full
-            bg-white/75
-            backdrop-blur-2xl
-            border
-            border-white/80
-            shadow-[0_12px_36px_rgba(87,186,152,0.12),0_2px_8px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.95)]
             transition-all
             duration-300
           "
@@ -61,7 +57,7 @@ function Navbar() {
           <Logo />
 
           {/* Desktop Menu with iOS Active Pill */}
-          <ul className="hidden lg:flex items-center gap-1 xl:gap-2.5 text-xs xl:text-sm">
+          <ul className="hidden lg:flex items-center gap-1 xl:gap-2.5 text-xs xl:text-sm relative z-10">
             {navLinks.map((item) => {
               const id = item.toLowerCase();
               const isActive = activeSection === id;
@@ -80,7 +76,7 @@ function Navbar() {
                       duration-200
                       ${
                         isActive
-                          ? "bg-[#57BA98]/20 text-[#57BA98] font-semibold shadow-xs"
+                          ? "ios-active-pill"
                           : "text-[#2D3748] hover:text-[#57BA98] hover:bg-white/60"
                       }
                     `}
@@ -92,23 +88,21 @@ function Navbar() {
             })}
           </ul>
 
-          {/* Desktop Glossy Resume Button */}
-          <div className="hidden lg:flex items-center">
+          {/* Desktop Glossy 3D Resume Button */}
+          <div className="hidden lg:flex items-center relative z-10">
             <a
               href="/resume/Varnaja_Uthayaraj_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="
-                flex items-center gap-1.5
-                px-4 xl:px-5
-                py-2
+                ios-glossy-button
+                flex items-center gap-2
+                px-5 xl:px-6
+                py-2 sm:py-2.5
                 text-xs xl:text-sm
                 font-semibold
                 rounded-full
-                bg-gradient-to-r from-[#57BA98] to-[#489F82]
                 text-white
-                shadow-[0_4px_14px_rgba(87,186,152,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)]
-                hover:shadow-[0_6px_20px_rgba(87,186,152,0.45)]
                 hover:scale-105
                 active:scale-95
                 transition-all
@@ -121,19 +115,18 @@ function Navbar() {
           </div>
 
           {/* Mobile Actions: Resume + Hamburger */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden relative z-10">
             <a
               href="/resume/Varnaja_Uthayaraj_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="
+                ios-glossy-button
                 flex items-center gap-1.5
                 px-3 py-1.5
                 text-xs font-semibold
                 rounded-full
-                bg-gradient-to-r from-[#57BA98] to-[#489F82]
                 text-white
-                shadow-sm
               "
             >
               <FaDownload className="text-[10px]" />
@@ -146,13 +139,16 @@ function Navbar() {
               className="
                 w-9 h-9
                 rounded-full
-                bg-[#EDF8F5]
+                bg-white/70
                 text-[#57BA98]
+                border border-[#57BA98]/30
+                shadow-xs
                 hover:bg-[#57BA98]
                 hover:text-white
                 transition-colors
                 flex items-center justify-center
                 text-base
+                cursor-pointer
               "
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
@@ -164,19 +160,16 @@ function Navbar() {
         {menuOpen && (
           <div
             className="
+              ios-glass-pill
               pointer-events-auto
               mt-2
               w-full max-w-sm
               mx-auto
               rounded-3xl
-              bg-white/90
-              backdrop-blur-2xl
-              shadow-[0_15px_40px_rgba(87,186,152,0.15),inset_0_1px_1px_rgba(255,255,255,0.95)]
-              border border-white/80
               p-5
             "
           >
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 relative z-10">
               {navLinks.map((item) => {
                 const id = item.toLowerCase();
                 const isActive = activeSection === id;
@@ -196,7 +189,7 @@ function Navbar() {
                       transition-all
                       ${
                         isActive
-                          ? "bg-[#57BA98]/20 text-[#57BA98] font-semibold"
+                          ? "ios-active-pill"
                           : "text-[#2D3748] hover:text-[#57BA98] hover:bg-white/60"
                       }
                     `}
