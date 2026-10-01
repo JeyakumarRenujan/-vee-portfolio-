@@ -11,7 +11,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen py-20 lg:py-0 flex items-center overflow-hidden bg-transparent"
+      className="relative min-h-screen pt-24 pb-16 lg:py-0 flex items-center overflow-hidden bg-transparent"
     >
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
