@@ -167,7 +167,7 @@ function Experience() {
                 {item.company}
               </h4>
 
-              <p className="text-gray-500 mt-4 sm:mt-6 leading-7 sm:leading-8 text-sm sm:text-base">
+              <p className="text-gray-500 mt-4 sm:mt-6 leading-7 sm:leading-8 text-sm sm:text-base text-justify">
                 {item.description}
               </p>
 

@@ -149,7 +149,7 @@ function Projects() {
                   {project.title}
                 </h3>
 
-                <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-justify">
                   {project.description}
                 </p>
 
