@@ -152,45 +152,43 @@ function Contact() {
               "
             >
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <input
-                  type="text"
-                  name="from_name"
-                  placeholder="Your Name"
-                  required
-                  className="
-                    w-full
-                    px-4 py-2.5 sm:py-3
-                    rounded-xl
-                    border
-                    border-gray-200
-                    outline-none
-                    bg-white/90
-                    focus:border-[#57BA98]
-                    text-sm
-                    transition
-                  "
-                />
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required
+                className="
+                  w-full
+                  px-4 py-2.5 sm:py-3
+                  rounded-xl
+                  border
+                  border-gray-200
+                  outline-none
+                  bg-white/90
+                  focus:border-[#57BA98]
+                  text-sm
+                  transition
+                "
+              />
 
-                <input
-                  type="email"
-                  name="from_email"
-                  placeholder="Your Email"
-                  required
-                  className="
-                    w-full
-                    px-4 py-2.5 sm:py-3
-                    rounded-xl
-                    border
-                    border-gray-200
-                    outline-none
-                    bg-white/90
-                    focus:border-[#57BA98]
-                    text-sm
-                    transition
-                  "
-                />
-              </div>
+              <input
+                type="email"
+                name="from_email"
+                placeholder="Your Email"
+                required
+                className="
+                  w-full
+                  px-4 py-2.5 sm:py-3
+                  rounded-xl
+                  border
+                  border-gray-200
+                  outline-none
+                  bg-white/90
+                  focus:border-[#57BA98]
+                  text-sm
+                  transition
+                "
+              />
 
               <input
                 type="text"
