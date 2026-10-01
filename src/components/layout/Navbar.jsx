@@ -36,14 +36,14 @@ function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-3 sm:top-4 left-0 right-0 z-50 flex flex-col items-center px-3 sm:px-6 pointer-events-none">
+    <header className="fixed top-3 sm:top-4 left-0 right-0 z-50 flex flex-col items-center px-2 sm:px-4 pointer-events-none">
       {/* Floating Glossy iOS Pill */}
       <nav
         className="
           pointer-events-auto
-          w-full max-w-6xl
+          w-[96%] sm:w-[94%] max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1440px]
           h-14 sm:h-16
-          px-4 sm:px-6
+          px-5 sm:px-8
           flex items-center justify-between
           rounded-full
           bg-white/75
@@ -59,7 +59,7 @@ function Navbar() {
         <Logo />
 
         {/* Desktop Menu with iOS Active Pill */}
-        <ul className="hidden lg:flex items-center gap-1 xl:gap-2 text-xs xl:text-sm">
+        <ul className="hidden lg:flex items-center gap-1 xl:gap-3 2xl:gap-4 text-xs xl:text-sm">
           {navLinks.map((item) => {
             const id = item.toLowerCase();
             const isActive = activeSection === id;
@@ -70,7 +70,7 @@ function Navbar() {
                   href={`#${id}`}
                   onClick={() => setActiveSection(id)}
                   className={`
-                    px-3 xl:px-3.5
+                    px-3.5 xl:px-4
                     py-1.5
                     rounded-full
                     font-medium
@@ -97,9 +97,9 @@ function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="
-              flex items-center gap-1.5
-              px-4 xl:px-5
-              py-2
+              flex items-center gap-2
+              px-5 xl:px-6
+              py-2 sm:py-2.5
               text-xs xl:text-sm
               font-semibold
               rounded-full
