@@ -11,11 +11,11 @@ function About() {
   return (
     <section
       id="about"
-      className="py-28 bg-transparent "
+      className="py-16 md:py-24 lg:py-28 bg-transparent"
     >
       <Container>
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left */}
 
@@ -32,8 +32,10 @@ function About() {
               <div
                 className="
                 absolute
-                w-72
-                h-72
+                w-60
+                h-60
+                sm:w-72
+                sm:h-72
                 bg-[#E8F8F3]
                 rounded-full
                 blur-3xl
@@ -44,7 +46,7 @@ function About() {
               <img
                 src={developer}
                 alt="Developer Illustration"
-                className="relative max-w-md w-full"
+                className="relative max-w-[260px] sm:max-w-sm md:max-w-md w-full"
               />
 
             </div>
@@ -60,15 +62,15 @@ function About() {
             viewport={{ once: true }}
           >
 
-            <h5 className="text-[#57BA98] font-bold">
+            <h5 className="text-[#57BA98] font-bold text-sm sm:text-base">
               ABOUT ME
             </h5>
 
-            <h2 className="text-5xl font-bold mt-3 text-[#2D3748]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-3 text-[#2D3748]">
               {aboutData.subtitle}
             </h2>
 
-            <p className="text-gray-600 mt-6 leading-8">
+            <p className="text-gray-600 mt-4 sm:mt-6 leading-7 sm:leading-8 text-sm sm:text-base">
               {aboutData.description}
             </p>
 
@@ -78,10 +80,10 @@ function About() {
 
                 <div
                   key={index}
-                  className="flex items-center gap-3"
+                  className="flex items-start gap-3 text-sm sm:text-base text-gray-700"
                 >
 
-                  <FaCheckCircle className="text-[#57BA98]" />
+                  <FaCheckCircle className="text-[#57BA98] mt-1 flex-shrink-0" />
 
                   <span>{item}</span>
 
@@ -97,15 +99,18 @@ function About() {
   download
   className="
     inline-block
-    mt-10
+    mt-8 sm:mt-10
     bg-[#57BA98]
     text-white
-    px-8
-    py-3
+    px-6 sm:px-8
+    py-2.5 sm:py-3
+    text-sm sm:text-base
+    font-medium
     rounded-xl
     hover:bg-[#65CCB8]
     transition
     duration-300
+    shadow-md
   "
 >
   Download CV

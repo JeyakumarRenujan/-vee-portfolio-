@@ -13,14 +13,14 @@ function Education() {
   const educationRef = useRef(null);
 
   const scrollLeft = (ref) => {
-    ref.current.scrollBy({
+    ref.current?.scrollBy({
       left: -350,
       behavior: "smooth",
     });
   };
 
   const scrollRight = (ref) => {
-    ref.current.scrollBy({
+    ref.current?.scrollBy({
       left: 350,
       behavior: "smooth",
     });
@@ -29,19 +29,23 @@ function Education() {
   return (
     <section
       id="education"
-      className="py-24 bg-transparent"
+      className="py-16 md:py-24 bg-transparent"
     >
       <Container>
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
 
-          <p className="text-[#57BA98] font-bold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
             Education
           </p>
 
-          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Academic Journey
           </h2>
+
+          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+            My educational background and academic qualifications.
+          </p>
 
         </div>
 
@@ -53,13 +57,13 @@ function Education() {
           viewport={{ once: true }}
         >
 
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex justify-between items-center mb-6 sm:mb-8">
 
             <div className="flex items-center gap-3">
 
-              <FaGraduationCap className="text-[#57BA98] text-3xl" />
+              <FaGraduationCap className="text-[#57BA98] text-2xl sm:text-3xl" />
 
-              <h3 className="text-3xl font-bold text-[#2D3748]">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#2D3748]">
                 Education
               </h3>
 
@@ -71,8 +75,8 @@ function Education() {
                 onClick={() => scrollLeft(educationRef)}
                 aria-label="Previous Education"
                 className="
-                  w-11
-                  h-11
+                  w-10 sm:w-11
+                  h-10 sm:h-11
                   rounded-full
                   bg-[#EDF8F5]
                   text-[#57BA98]
@@ -80,6 +84,9 @@ function Education() {
                   hover:bg-[#57BA98]
                   hover:text-white
                   transition
+                  flex
+                  items-center
+                  justify-center
                 "
               >
                 <FaChevronLeft className="mx-auto" />
@@ -89,8 +96,8 @@ function Education() {
                 onClick={() => scrollRight(educationRef)}
                 aria-label="Next Education"
                 className="
-                  w-11
-                  h-11
+                  w-10 sm:w-11
+                  h-10 sm:h-11
                   rounded-full
                   bg-[#EDF8F5]
                   text-[#57BA98]
@@ -98,6 +105,9 @@ function Education() {
                   hover:bg-[#57BA98]
                   hover:text-white
                   transition
+                  flex
+                  items-center
+                  justify-center
                 "
               >
                 <FaChevronRight className="mx-auto" />
@@ -124,11 +134,11 @@ function Education() {
               <div
                 key={index}
                 className="
-                  w-[90vw]
+                  w-[85vw]
                   sm:w-[320px]
                   md:w-[340px]
                   lg:w-[340px]
-                  h-[250px]
+                  min-h-[240px]
                   flex-shrink-0
                   bg-[#EDF8F5]
                   rounded-3xl
@@ -137,23 +147,30 @@ function Education() {
                   border-[#DCEFE8]
                   transition-all
                   duration-300
-                  p-8
+                  p-6 sm:p-8
+                  flex
+                  flex-col
+                  justify-between
                 "
               >
 
-                <h4 className="text-2xl font-bold text-[#2D3748]">
-                  {item.degree}
-                </h4>
+                <div>
 
-                <p className="mt-3">
-                  {item.institution}
-                </p>
+                  <h4 className="text-xl sm:text-2xl font-bold text-[#2D3748]">
+                    {item.degree}
+                  </h4>
 
-                <p>
-                  {item.faculty}
-                </p>
+                  <p className="mt-3 text-[#57BA98] font-semibold text-sm sm:text-base">
+                    {item.institution}
+                  </p>
 
-                <p className="mt-3 text-gray-500">
+                  <p className="mt-1 text-gray-600 text-sm sm:text-base">
+                    {item.faculty}
+                  </p>
+
+                </div>
+
+                <p className="mt-4 text-gray-500 text-xs sm:text-sm font-medium">
                   {item.duration}
                 </p>
 

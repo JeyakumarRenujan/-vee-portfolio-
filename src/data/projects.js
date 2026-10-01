@@ -148,7 +148,7 @@ const projects = [
     title: "Modern Personal Portfolio Website",
     type: "Web Application",
     description:
-      "A modern, fully responsive personal portfolio website showcasing projects, technical skills, education, experience, and research work.",
+      "A modern, fully responsive personal portfolio website showcasing projects, technical skills, certifications, experience, and research work.",
     technologies: [
       "React",
       "Tailwind CSS",

@@ -39,7 +39,7 @@ function Navbar() {
 
           {/* Desktop Menu */}
 
-          <ul className="hidden lg:flex items-center gap-10">
+          <ul className="hidden lg:flex items-center gap-5 xl:gap-8 text-sm xl:text-base">
 
             {navLinks.map((item) => (
 
@@ -76,8 +76,9 @@ function Navbar() {
               flex
               items-center
               gap-2
-              px-6
-              py-2.5
+              px-4 xl:px-6
+              py-2 xl:py-2.5
+              text-sm xl:text-base
               rounded-full
               bg-[#57BA98]
               text-white
@@ -98,10 +99,12 @@ function Navbar() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle Navigation Menu"
             className="
             lg:hidden
-            text-3xl
+            text-2xl sm:text-3xl
             text-[#57BA98]
+            p-2
             "
           >
             {menuOpen ? <FaTimes /> : <FaBars />}

@@ -11,10 +11,10 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-transparent"
+      className="relative min-h-screen py-20 lg:py-0 flex items-center overflow-hidden bg-transparent"
     >
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Side */}
 
@@ -23,11 +23,11 @@ function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[#57BA98] font-bold text-lg">
+            <p className="text-[#57BA98] font-bold text-base sm:text-lg">
               {heroData.greeting}
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mt-2 leading-tight text-[#2D3748]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-2 leading-tight text-[#2D3748]">
               {heroData.name}
             </h1>
             
@@ -48,10 +48,10 @@ function Hero() {
               ]}
               speed={40}
               repeat={Infinity}
-              className="text-2xl md:text-3xl text-[#57BA98] font-bold mt-6 block"
+              className="text-xl sm:text-2xl md:text-3xl text-[#57BA98] font-bold mt-4 sm:mt-6 block"
             />
 
-            <p className="text-gray-600 mt-6 leading-8 max-w-xl">
+            <p className="text-gray-600 mt-5 sm:mt-6 leading-7 sm:leading-8 max-w-xl text-sm sm:text-base">
               {heroData.description}
             </p>
 
@@ -106,6 +106,7 @@ function Hero() {
                 href={heroData.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub profile"
                 className="hover:text-[#57BA98] hover:scale-125 transition"
               >
                 <FaGithub />
@@ -115,13 +116,15 @@ function Hero() {
                 href={heroData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
                 className="hover:text-[#57BA98] hover:scale-125 transition"
               >
                 <FaLinkedin />
               </a>
 
               <a
-                href={heroData.email}
+                href={`mailto:${heroData.email}`}
+                aria-label="Send email"
                 className="hover:text-[#57BA98] hover:scale-125 transition"
               >
                 <FaEnvelope />
@@ -137,7 +140,7 @@ function Hero() {
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="flex justify-center"
+            className="flex justify-center mt-6 lg:mt-0"
           >
             <div className="relative flex justify-center items-center">
 
@@ -146,8 +149,10 @@ function Hero() {
               <div
                 className="
                 absolute
-                w-[320px]
-                h-[320px]
+                w-[240px]
+                h-[240px]
+                sm:w-[320px]
+                sm:h-[320px]
                 md:w-[380px]
                 md:h-[380px]
                 bg-[#65CCB8]
@@ -161,11 +166,13 @@ function Hero() {
 
               <img
                 src={profile}
-                alt="Profile"
+                alt="Varnaja Uthayaraj Profile"
                 className="
                 relative
-                w-[280px]
-                h-[280px]
+                w-[220px]
+                h-[220px]
+                sm:w-[280px]
+                sm:h-[280px]
                 md:w-[340px]
                 md:h-[340px]
                 lg:w-[400px]
@@ -189,9 +196,9 @@ function Hero() {
 
       {/* Scroll Down */}
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-3xl text-[#57BA98]">
+      <div className="hidden sm:block absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-2xl sm:text-3xl text-[#57BA98]">
 
-        <a href="#stats">
+        <a href="#about" aria-label="Scroll down to About section">
           ↓
         </a>
 

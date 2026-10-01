@@ -27,23 +27,23 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="py-24 bg-transparent"
+      className="py-16 md:py-24 bg-transparent"
     >
       <Container>
 
         {/* Section Heading */}
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
 
-          <p className="text-[#57BA98] font-bold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
             Experience
           </p>
 
-          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Professional Journey
           </h2>
 
-          <p className="text-gray-500 mt-4">
+          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
             My internship and professional development experience.
           </p>
 
@@ -55,9 +55,10 @@ function Experience() {
 
           <button
             onClick={scrollLeft}
+            aria-label="Previous Experience"
             className="
-              w-11
-              h-11
+              w-10 sm:w-11
+              h-10 sm:h-11
               rounded-full
               bg-[#E8F8F3]
               text-[#57BA98]
@@ -75,9 +76,10 @@ function Experience() {
 
           <button
             onClick={scrollRight}
+            aria-label="Next Experience"
             className="
-              w-11
-              h-11
+              w-10 sm:w-11
+              h-10 sm:h-11
               rounded-full
               bg-[#E8F8F3]
               text-[#57BA98]
@@ -105,10 +107,8 @@ function Experience() {
             overflow-x-auto
             scroll-smooth
             pb-4
+            scrollbar-hide
           "
-          style={{
-            scrollbarWidth: "none",
-          }}
         >
 
           {experience.map((item, index) => (
@@ -124,17 +124,17 @@ function Experience() {
               }}
               className="
                 relative
-                w-[90vw]
-sm:w-[340px]
-md:w-[360px]
-lg:w-[380px]
+                w-[85vw]
+                sm:w-[340px]
+                md:w-[360px]
+                lg:w-[380px]
 
                 min-h-[300px]
                 bg-white/70
                 backdrop-blur-md
                 rounded-3xl
                 shadow-lg
-                p-7
+                p-6 sm:p-7
                 border-l-4
                 border-[#57BA98]
                 border
@@ -167,11 +167,11 @@ lg:w-[380px]
                 {item.company}
               </h4>
 
-              <p className="text-gray-500 mt-6 leading-8">
+              <p className="text-gray-500 mt-4 sm:mt-6 leading-7 sm:leading-8 text-sm sm:text-base">
                 {item.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mt-6">
+              <div className="flex flex-wrap gap-2 mt-5 sm:mt-6">
 
                 {item.skills.map((skill) => (
 
@@ -181,9 +181,9 @@ lg:w-[380px]
                       bg-[#E8F8F3]
                       text-[#57BA98]
                       px-3
-                      py-1.5
+                      py-1
                       rounded-full
-                      text-sm
+                      text-xs sm:text-sm
                       font-medium
                       transition
                       duration-300

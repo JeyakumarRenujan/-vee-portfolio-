@@ -14,15 +14,15 @@ function Footer() {
 
         <div className="text-center">
 
-          <h2 className="text-3xl font-bold">
+          <h2 className="text-2xl sm:text-3xl font-bold">
             Varnaja Uthayaraj
           </h2>
 
-          <p className="text-gray-400 mt-3">
+          <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base">
             AI/ML & Software Engineer | Computer Engineering
           </p>
 
-          <div className="flex justify-center gap-8 mt-8 flex-wrap">
+          <div className="flex justify-center gap-4 sm:gap-8 mt-6 sm:mt-8 flex-wrap text-sm sm:text-base">
 
             <a
               href="#home"
@@ -74,6 +74,7 @@ function Footer() {
               href={contactData.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub Profile"
               className="
                 hover:text-[#65CCB8]
                 hover:scale-110
@@ -88,6 +89,7 @@ function Footer() {
               href={contactData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
               className="
                 hover:text-[#65CCB8]
                 hover:scale-110

@@ -40,53 +40,58 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-transparent"
+      className="py-16 md:py-24 bg-transparent"
     >
       <Container>
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
 
-          <p className="text-[#57BA98] font-bold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
             Contact
           </p>
 
-          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Get In Touch
           </h2>
 
-          <p className="text-gray-500 mt-4">
+          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
             Have a project or opportunity? Feel free to contact me.
           </p>
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
           {/* Left */}
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
 
-            <div className="flex items-center gap-4">
-              <FaEnvelope className="text-[#57BA98] text-2xl" />
-              <span>{contactData.email}</span>
+            <div className="flex items-center gap-4 text-sm sm:text-base">
+              <FaEnvelope className="text-[#57BA98] text-xl sm:text-2xl flex-shrink-0" />
+              <a href={`mailto:${contactData.email}`} className="break-all hover:text-[#57BA98] transition">
+                {contactData.email}
+              </a>
             </div>
 
-            <div className="flex items-center gap-4">
-              <FaPhone className="text-[#57BA98] text-2xl" />
-              <span>{contactData.phone}</span>
+            <div className="flex items-center gap-4 text-sm sm:text-base">
+              <FaPhone className="text-[#57BA98] text-xl sm:text-2xl flex-shrink-0" />
+              <a href={`tel:${contactData.phone}`} className="hover:text-[#57BA98] transition">
+                {contactData.phone}
+              </a>
             </div>
 
-            <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-[#57BA98] text-2xl" />
+            <div className="flex items-center gap-4 text-sm sm:text-base">
+              <FaMapMarkerAlt className="text-[#57BA98] text-xl sm:text-2xl flex-shrink-0" />
               <span>{contactData.location}</span>
             </div>
 
-            <div className="flex gap-6 text-3xl pt-4">
+            <div className="flex gap-6 text-2xl sm:text-3xl pt-2 sm:pt-4">
 
               <a
                 href={contactData.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub Profile"
                 className="hover:text-[#57BA98] hover:scale-110 transition"
               >
                 <FaGithub />
@@ -96,6 +101,7 @@ function Contact() {
                 href={contactData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
                 className="hover:text-[#57BA98] hover:scale-110 transition"
               >
                 <FaLinkedin />
@@ -114,7 +120,7 @@ function Contact() {
             <div
               className="
               absolute
-              -inset-6
+              -inset-4 sm:-inset-6
               bg-[#65CCB8]
               rounded-full
               blur-3xl
@@ -127,10 +133,10 @@ function Contact() {
               ref={form}
               onSubmit={sendEmail}
               className="
-                space-y-5
+                space-y-4 sm:space-y-5
                 bg-white/70
                 backdrop-blur-md
-                p-8
+                p-6 sm:p-8
                 rounded-3xl
                 shadow-xl
                 border

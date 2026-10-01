@@ -1,40 +1,49 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-body{
-    font-family:Inter,sans-serif;
+body {
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-ul{
-    list-style:none;
+ul {
+  list-style: none;
 }
 
-button{
-    cursor:pointer;
+button {
+  cursor: pointer;
 }
 
-img{
-    max-width:100%;
-    display:block;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Hide scrollbar for smooth sideways slider */
+/* Hide scrollbar for smooth sideways slider & enable momentum scrolling */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }

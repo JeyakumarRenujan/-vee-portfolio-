@@ -30,21 +30,21 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-transparent"
+      className="py-16 md:py-24 bg-transparent"
     >
       <Container>
 
         <div className="text-center">
 
-          <p className="text-[#57BA98] font-bold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
             My Works
           </p>
 
-          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Featured Projects
           </h2>
 
-          <p className="text-gray-500 mt-4">
+          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
             Some of my projects that demonstrate my technical skills and practical
             experience.
           </p>
@@ -53,14 +53,14 @@ function Projects() {
 
         {/* Arrow Buttons */}
 
-        <div className="flex justify-end gap-3 mt-10 mb-6">
+        <div className="flex justify-end gap-3 mt-8 sm:mt-10 mb-6">
 
           <button
             onClick={scrollLeft}
-            aria-label="Previous"
+            aria-label="Previous Project"
             className="
-              w-11
-              h-11
+              w-10 sm:w-11
+              h-10 sm:h-11
               rounded-full
               bg-[#EDF8F5]
               text-[#57BA98]
@@ -78,10 +78,10 @@ function Projects() {
 
           <button
             onClick={scrollRight}
-            aria-label="Next"
+            aria-label="Next Project"
             className="
-              w-11
-              h-11
+              w-10 sm:w-11
+              h-10 sm:h-11
               rounded-full
               bg-[#EDF8F5]
               text-[#57BA98]
@@ -105,7 +105,7 @@ function Projects() {
           ref={sliderRef}
           className="
             flex
-            gap-8
+            gap-6 sm:gap-8
             overflow-x-auto
             scroll-smooth
             pb-6
@@ -121,7 +121,7 @@ function Projects() {
                 y: -10,
               }}
               className="
-                w-[90vw]
+                w-[85vw]
                 sm:w-[340px]
                 md:w-[360px]
                 lg:w-[380px]
@@ -139,17 +139,17 @@ function Projects() {
                 flex
                 flex-col
                 justify-between
-                p-7
+                p-6 sm:p-7
               "
             >
 
               <div>
 
-                <h3 className="text-2xl font-bold text-[#2D3748]">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#2D3748]">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-500 mt-4 leading-relaxed">
+                <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed">
                   {project.description}
                 </p>
 

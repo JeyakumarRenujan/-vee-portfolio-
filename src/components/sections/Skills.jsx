@@ -8,27 +8,27 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 bg-transparent"
+      className="py-16 md:py-24 bg-transparent"
     >
       <Container>
 
         <div className="text-center">
 
-          <p className="text-[#57BA98] font-bold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
             My Skills
           </p>
 
-          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Technologies I Work With
           </h2>
 
-          <p className="text-gray-500 mt-4">
-            Modern technologies used for building full stack applications.
+          <p className="text-gray-500 mt-3 sm:mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+            Modern technologies used for building full stack applications and AI/ML solutions.
           </p>
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mt-16">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mt-12 sm:mt-16">
 
           {skills.map((group, index) => (
 
@@ -46,7 +46,7 @@ function Skills() {
                 bg-white/65
                 backdrop-blur-xl
                 rounded-3xl
-                p-8
+                p-6 sm:p-8
                 shadow-lg
                 border
                 border-[#E8F8F3]
@@ -56,11 +56,11 @@ function Skills() {
               "
             >
 
-              <h3 className="text-2xl font-bold mb-6 text-[#2D3748]">
+              <h3 className="text-xl sm:text-2xl font-bold mb-5 sm:mb-6 text-[#2D3748]">
                 {group.category}
               </h3>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-2.5 sm:gap-3.5">
 
                 {group.items.map((item) => (
 
@@ -69,9 +69,11 @@ function Skills() {
                     className="
                       bg-[#E8F8F3]
                       text-[#57BA98]
-                      px-5
-                      py-2
+                      px-3.5 sm:px-5
+                      py-1.5 sm:py-2
                       rounded-full
+                      text-xs sm:text-sm
+                      font-medium
                       shadow-sm
                       cursor-default
                       hover:bg-[#57BA98]
