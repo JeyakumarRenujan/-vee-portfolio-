@@ -29,3 +29,12 @@ img{
     max-width:100%;
     display:block;
 }
+
+/* Hide scrollbar for smooth sideways slider */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,13 +1,37 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaFolderOpen } from "react-icons/fa";
+import { useRef } from "react";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaChevronLeft,
+  FaChevronRight,
+  FaFolderOpen,
+} from "react-icons/fa";
+
 import projects from "../../data/projects";
 import Container from "../common/Container";
 
 function Projects() {
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current?.scrollBy({
+      left: -380,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current?.scrollBy({
+      left: 380,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section id="projects" className="py-24 bg-transparent">
       <Container>
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto">
           <p className="text-[#57BA98] font-bold uppercase tracking-wider text-sm">
             My Works
           </p>
@@ -15,21 +39,78 @@ function Projects() {
             Featured Projects & Research
           </h2>
           <p className="text-gray-500 mt-4 text-base sm:text-lg">
-            A comprehensive showcase of my 11 projects including research work, full-stack applications, deep learning models, and IoT systems.
+            Explore my 11 projects including research work, full-stack applications, deep learning models, and IoT systems.
           </p>
         </div>
 
-        {/* Responsive Grid Layout showcasing ALL 11 projects cleanly */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        {/* Sideways Navigation Arrow Buttons */}
+        <div className="flex justify-end gap-3 mt-10 mb-6">
+          <button
+            onClick={scrollLeft}
+            aria-label="Scroll Left"
+            className="
+              w-11
+              h-11
+              rounded-full
+              bg-[#EDF8F5]
+              text-[#57BA98]
+              shadow
+              hover:bg-[#57BA98]
+              hover:text-white
+              transition
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <FaChevronLeft className="text-sm" />
+          </button>
+
+          <button
+            onClick={scrollRight}
+            aria-label="Scroll Right"
+            className="
+              w-11
+              h-11
+              rounded-full
+              bg-[#EDF8F5]
+              text-[#57BA98]
+              shadow
+              hover:bg-[#57BA98]
+              hover:text-white
+              transition
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <FaChevronRight className="text-sm" />
+          </button>
+        </div>
+
+        {/* Horizontal Sideways Scroll Container */}
+        <div
+          ref={sliderRef}
+          className="
+            flex
+            gap-8
+            overflow-x-auto
+            scroll-smooth
+            pb-6
+            pt-2
+            scrollbar-hide
+          "
+        >
+          {projects.map((project) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              viewport={{ once: true }}
               whileHover={{ y: -8 }}
               className="
+                w-[88vw]
+                sm:w-[340px]
+                md:w-[360px]
+                lg:w-[380px]
+                flex-shrink-0
                 flex flex-col justify-between
                 bg-[#E8F8F3]
                 backdrop-blur-xl
@@ -89,7 +170,7 @@ function Projects() {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
+                {/* Bottom Action Button */}
                 <div className="flex items-center gap-3 pt-4 border-t border-[#57BA98]/20">
                   <a
                     href={project.github}
