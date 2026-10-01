@@ -4,7 +4,7 @@ import Container from "../common/Container";
 
 function Research() {
   return (
-    <section id="research" className="scroll-mt-20 sm:scroll-mt-24 py-16 md:py-24 bg-transparent">
+    <section id="research" className="py-16 md:py-24 bg-transparent">
       <Container>
         {/* Section Heading */}
         <div className="text-center mb-12 sm:mb-16">
