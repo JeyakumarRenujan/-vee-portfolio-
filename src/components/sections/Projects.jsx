@@ -36,9 +36,11 @@ function Projects() {
 
         <div className="relative text-center mb-8 sm:mb-10 md:mb-12">
 
-          <p className="text-[#57BA98] font-bold uppercase text-xs sm:text-sm tracking-wider">
-            My Works
-          </p>
+          <div>
+            <span className="ios-section-badge">
+              My Works
+            </span>
+          </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1.5 text-[#2D3748]">
             Featured Projects
@@ -109,16 +111,7 @@ function Projects() {
                 md:w-[350px]
                 lg:w-[360px]
                 flex-shrink-0
-                bg-[#E8F8F3]
-                backdrop-blur-xl
-                rounded-2xl sm:rounded-3xl
-                shadow-md
-                border
-                border-[#E8F8F3]
-                hover:shadow-[0_12px_28px_rgba(87,186,152,0.18)]
-                hover:-translate-y-1.5
-                transition-all
-                duration-300
+                ios-glass-card
                 flex
                 flex-col
                 justify-between
@@ -147,14 +140,10 @@ function Projects() {
                     <span
                       key={tech}
                       className="
-                        bg-white
-                        text-[#57BA98]
+                        ios-pill-tag
                         px-2.5
                         py-0.5
-                        rounded-full
                         text-xs
-                        font-medium
-                        shadow-xs
                       "
                     >
                       {tech}

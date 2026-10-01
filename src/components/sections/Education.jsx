@@ -29,15 +29,17 @@ function Education() {
   return (
     <section
       id="education"
-      className="py-16 md:py-24 bg-transparent"
+      className="py-16 md:py-24 bg-transparent scroll-mt-20"
     >
       <Container>
 
         <div className="text-center mb-12 sm:mb-16">
 
-          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
-            Education
-          </p>
+          <div>
+            <span className="ios-section-badge">
+              Education
+            </span>
+          </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Academic Journey
@@ -124,13 +126,7 @@ function Education() {
                   lg:w-[340px]
                   min-h-[240px]
                   flex-shrink-0
-                  bg-[#EDF8F5]
-                  rounded-3xl
-                  shadow-[0_10px_30px_rgba(87,186,152,0.12)]
-                  border
-                  border-[#DCEFE8]
-                  transition-all
-                  duration-300
+                  ios-glass-card
                   p-6 sm:p-8
                   flex
                   flex-col
@@ -154,9 +150,11 @@ function Education() {
 
                 </div>
 
-                <p className="mt-4 text-gray-500 text-xs sm:text-sm font-medium">
-                  {item.duration}
-                </p>
+                <div className="mt-4">
+                  <span className="ios-pill-tag px-3 py-1 text-xs font-semibold">
+                    {item.duration}
+                  </span>
+                </div>
 
               </div>
 

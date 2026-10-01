@@ -38,9 +38,11 @@ function TechStack() {
 
           <div className="text-center">
 
-            <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
-              Tech Stack
-            </p>
+            <div>
+              <span className="ios-section-badge">
+                Tech Stack
+              </span>
+            </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
               Tools & Technologies
@@ -59,21 +61,14 @@ function TechStack() {
               <motion.div
                 key={tech}
                 whileHover={{
-                  y: -8,
-                  scale: 1.05,
+                  y: -6,
+                  scale: 1.04,
                 }}
                 className="
-                  bg-white/65
-                  backdrop-blur-xl
+                  ios-glass-card
                   rounded-2xl
-                  shadow-lg
-                  border
-                  border-[#E8F8F3]
-                  p-4 sm:p-6
+                  p-4 sm:p-5
                   text-center
-                  hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-                  transition-all
-                  duration-300
                 "
               >
 

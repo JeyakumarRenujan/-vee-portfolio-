@@ -9,80 +9,43 @@ import contactData from "../../data/contactData";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="ios-glass-footer py-12 text-[#2D3748] mt-12">
       <Container>
 
         <div className="text-center">
 
-          <h2 className="text-2xl sm:text-3xl font-bold">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#2D3748]">
             Varnaja Uthayaraj
           </h2>
 
-          <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base">
+          <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base">
             AI/ML & Software Engineer | Computer Engineering
           </p>
 
-          <div className="flex justify-center gap-4 sm:gap-8 mt-6 sm:mt-8 flex-wrap text-sm sm:text-base">
+          <div className="flex justify-center gap-2 sm:gap-3 mt-6 sm:mt-8 flex-wrap text-xs sm:text-sm">
 
-            <a
-              href="#home"
-              className="hover:text-[#65CCB8] transition duration-300"
-            >
-              Home
-            </a>
-
-            <a
-              href="#about"
-              className="hover:text-[#65CCB8] transition duration-300"
-            >
-              About
-            </a>
-
-            <a
-              href="#research"
-              className="hover:text-[#65CCB8] transition duration-300"
-            >
-              Research
-            </a>
-
-            <a
-              href="#skills"
-              className="hover:text-[#65CCB8] transition duration-300"
-            >
-              Skills
-            </a>
-
-            <a
-              href="#projects"
-              className="hover:text-[#65CCB8] transition duration-300"
-            >
-              Projects
-            </a>
-
-            <a
-              href="#contact"
-              className="hover:text-[#65CCB8] transition duration-300"
-            >
-              Contact
-            </a>
+            {["Home", "About", "Research", "Skills", "Projects", "Experience", "Education", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="px-3.5 py-1.5 rounded-full text-gray-600 hover:text-[#57BA98] hover:bg-white/80 transition-all font-medium"
+              >
+                {item}
+              </a>
+            ))}
 
           </div>
 
-          <div className="flex justify-center gap-6 text-2xl mt-8">
+          <div className="flex justify-center gap-4 text-xl mt-8">
 
             <a
               href={contactData.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="
-                hover:text-[#65CCB8]
-                hover:scale-110
-                transition
-                duration-300
-              "
+              className="ios-glossy-icon-btn w-10 h-10 rounded-full text-lg"
             >
-              <FaGithub />
+              <FaGithub className="relative z-10" />
             </a>
 
             <a
@@ -90,33 +53,24 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="
-                hover:text-[#65CCB8]
-                hover:scale-110
-                transition
-                duration-300
-              "
+              className="ios-glossy-icon-btn w-10 h-10 rounded-full text-lg"
             >
-              <FaLinkedin />
+              <FaLinkedin className="relative z-10" />
             </a>
 
             <a
               href={`mailto:${contactData.email}`}
-              className="
-                hover:text-[#65CCB8]
-                hover:scale-110
-                transition
-                duration-300
-              "
+              aria-label="Email"
+              className="ios-glossy-icon-btn w-10 h-10 rounded-full text-lg"
             >
-              <FaEnvelope />
+              <FaEnvelope className="relative z-10" />
             </a>
 
           </div>
 
-          <div className="border-t border-[#57BA98]/20 mt-10 pt-6">
+          <div className="border-t border-[#57BA98]/15 mt-10 pt-6">
 
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-xs sm:text-sm">
               © 2026 Vee. All Rights Reserved.
             </p>
 

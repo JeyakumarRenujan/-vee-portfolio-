@@ -4,13 +4,15 @@ import Container from "../common/Container";
 
 function Research() {
   return (
-    <section id="research" className="py-16 md:py-24 bg-transparent">
+    <section id="research" className="py-16 md:py-24 bg-transparent scroll-mt-20">
       <Container>
         {/* Section Heading */}
         <div className="text-center mb-12 sm:mb-16">
-          <p className="text-[#57BA98] font-bold uppercase text-sm sm:text-base">
-            Research
-          </p>
+          <div>
+            <span className="ios-section-badge">
+              Research
+            </span>
+          </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Research Project
@@ -21,7 +23,7 @@ function Research() {
           </p>
         </div>
 
-        {/* Research Card matching site theme */}
+        {/* Research Card matching iOS glass theme */}
         <div className="max-w-4xl mx-auto">
           {research.map((item, index) => (
             <motion.div
@@ -32,16 +34,8 @@ function Research() {
               transition={{ duration: 0.6 }}
               whileHover={{ y: -6 }}
               className="
-                bg-[#E8F8F3]
-                backdrop-blur-xl
-                rounded-3xl
-                shadow-lg
+                ios-glass-card
                 p-6 sm:p-8 md:p-10
-                border
-                border-[#E8F8F3]
-                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-                transition-all
-                duration-300
               "
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#57BA98]/20 pb-5 mb-6">
@@ -49,7 +43,7 @@ function Research() {
                   {item.title}
                 </h3>
 
-                <span className="text-[#57BA98] font-semibold text-xs sm:text-sm">
+                <span className="ios-pill-tag px-3.5 py-1 text-xs sm:text-sm font-semibold">
                   {item.duration}
                 </span>
               </div>
@@ -68,14 +62,10 @@ function Research() {
                   <span
                     key={tech}
                     className="
-                      bg-white
-                      text-[#57BA98]
-                      px-3 sm:px-4
+                      ios-pill-tag
+                      px-3.5 sm:px-4
                       py-1 sm:py-1.5
-                      rounded-full
                       text-xs sm:text-sm
-                      font-medium
-                      shadow-sm
                     "
                   >
                     {tech}

@@ -25,15 +25,17 @@ function Services() {
   return (
     <section
       id="services"
-      className="relative py-16 md:py-24 bg-transparent overflow-hidden"
+      className="relative py-16 md:py-24 bg-transparent overflow-hidden scroll-mt-20"
     >
       <Container>
 
         <div className="text-center">
 
-          <p className="text-[#57BA98] font-semibold uppercase text-sm sm:text-base">
-            What I Do
-          </p>
+          <div>
+            <span className="ios-section-badge">
+              What I Do
+            </span>
+          </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-[#2D3748]">
             Areas of Expertise
@@ -78,25 +80,17 @@ function Services() {
             <motion.div
               key={index}
               whileHover={{
-                y: -10,
+                y: -8,
                 scale: 1.02,
               }}
               className="
-                bg-white/65
-                backdrop-blur-xl
+                ios-glass-card
                 p-6 sm:p-8
-                rounded-3xl
-                shadow-lg
                 text-center
-                border
-                border-[#E8F8F3]
-                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-                transition-all
-                duration-300
               "
             >
 
-              <div className="text-4xl sm:text-5xl text-[#57BA98] mb-5 sm:mb-6 flex justify-center">
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-white/80 border border-[#57BA98]/30 shadow-[inset_0_1px_1.5px_rgba(255,255,255,1),0_4px_12px_rgba(87,186,152,0.12)] text-2xl sm:text-3xl text-[#57BA98] mb-5 sm:mb-6 flex items-center justify-center">
                 {icons[index]}
               </div>
 

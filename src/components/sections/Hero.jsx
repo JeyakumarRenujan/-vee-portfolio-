@@ -23,9 +23,11 @@ function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[#57BA98] font-bold text-base sm:text-lg">
-              {heroData.greeting}
-            </p>
+            <div>
+              <span className="ios-section-badge mb-3">
+                {heroData.greeting}
+              </span>
+            </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-2 leading-tight text-[#2D3748]">
               {heroData.name}
@@ -88,16 +90,16 @@ function Hero() {
 
             </div>
 
-            <div className="flex gap-6 text-2xl mt-10 text-gray-700">
+            <div className="flex gap-4 text-xl mt-10">
 
               <a
                 href={heroData.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
-                className="hover:text-[#57BA98] hover:scale-125 transition"
+                className="ios-glossy-icon-btn w-11 h-11 rounded-full text-lg"
               >
-                <FaGithub />
+                <FaGithub className="relative z-10" />
               </a>
 
               <a
@@ -105,17 +107,17 @@ function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
-                className="hover:text-[#57BA98] hover:scale-125 transition"
+                className="ios-glossy-icon-btn w-11 h-11 rounded-full text-lg"
               >
-                <FaLinkedin />
+                <FaLinkedin className="relative z-10" />
               </a>
 
               <a
                 href={`mailto:${heroData.email}`}
                 aria-label="Send email"
-                className="hover:text-[#57BA98] hover:scale-125 transition"
+                className="ios-glossy-icon-btn w-11 h-11 rounded-full text-lg"
               >
-                <FaEnvelope />
+                <FaEnvelope className="relative z-10" />
               </a>
 
             </div>
@@ -184,10 +186,14 @@ function Hero() {
 
       {/* Scroll Down */}
 
-      <div className="hidden sm:block absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-2xl sm:text-3xl text-[#57BA98]">
+      <div className="hidden sm:block absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
 
-        <a href="#about" aria-label="Scroll down to About section">
-          ↓
+        <a
+          href="#about"
+          aria-label="Scroll down to About section"
+          className="ios-glossy-icon-btn w-9 h-9 rounded-full text-sm"
+        >
+          <span className="relative z-10">↓</span>
         </a>
 
       </div>

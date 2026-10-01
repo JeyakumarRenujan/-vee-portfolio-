@@ -46,9 +46,11 @@ function Contact() {
 
         <div className="text-center mb-6 sm:mb-8">
 
-          <p className="text-[#57BA98] font-bold uppercase text-xs sm:text-sm tracking-wider">
-            Contact
-          </p>
+          <div>
+            <span className="ios-section-badge">
+              Contact
+            </span>
+          </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 text-[#2D3748]">
             Get In Touch
