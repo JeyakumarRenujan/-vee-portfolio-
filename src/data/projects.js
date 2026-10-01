@@ -99,6 +99,22 @@ const projects = [
   },
   {
     id: 7,
+    title: "Smart Supermarket Product Identification",
+    type: "Computer Vision & AI",
+    description:
+      "Digital image processing and deep learning-based automated product identification system for smart supermarkets using YOLO. Detects and classifies 17 retail product categories with real-time recognition via a Streamlit web interface.",
+    technologies: [
+      "Python",
+      "YOLO",
+      "PyTorch",
+      "OpenCV",
+      "Streamlit",
+    ],
+    github: "https://github.com/JeyakumarRenujan/smart-supermarket-product-identification",
+    demo: "https://github.com/JeyakumarRenujan/smart-supermarket-product-identification",
+  },
+  {
+    id: 8,
     title: "CPU Scheduling Simulator",
     type: "Operating Systems Tool",
     description:
@@ -113,7 +129,7 @@ const projects = [
     demo: "https://github.com/VeeQubit/CPU_Process_Scheduler",
   },
   {
-    id: 8,
+    id: 9,
     title: "Lab Scheduling & Reservation System",
     type: "Web Application",
     description:
@@ -128,7 +144,7 @@ const projects = [
     demo: "https://github.com/VeeQubit/Lab_Rescheduling_DBMS",
   },
   {
-    id: 9,
+    id: 10,
     title: "Modern Personal Portfolio Website",
     type: "Web Application",
     description:

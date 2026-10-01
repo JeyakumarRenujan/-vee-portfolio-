@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import {
@@ -57,7 +58,6 @@ function Projects() {
 
           <button
             onClick={scrollLeft}
-            aria-label="Previous"
             className="
               w-11
               h-11
@@ -68,9 +68,6 @@ function Projects() {
               hover:bg-[#57BA98]
               hover:text-white
               transition
-              flex
-              items-center
-              justify-center
             "
           >
             <FaChevronLeft className="mx-auto" />
@@ -78,7 +75,6 @@ function Projects() {
 
           <button
             onClick={scrollRight}
-            aria-label="Next"
             className="
               w-11
               h-11
@@ -89,9 +85,6 @@ function Projects() {
               hover:bg-[#57BA98]
               hover:text-white
               transition
-              flex
-              items-center
-              justify-center
             "
           >
             <FaChevronRight className="mx-auto" />
@@ -99,7 +92,7 @@ function Projects() {
 
         </div>
 
-        {/* Horizontal Scroll (No Images) */}
+        {/* Horizontal Scroll */}
 
         <div
           ref={sliderRef}
@@ -108,7 +101,7 @@ function Projects() {
             gap-8
             overflow-x-auto
             scroll-smooth
-            pb-6
+            pb-4
             scrollbar-hide
           "
         >
@@ -121,41 +114,47 @@ function Projects() {
                 y: -10,
               }}
               className="
-                w-[90vw]
-                sm:w-[340px]
-                md:w-[360px]
-                lg:w-[380px]
-                flex-shrink-0
-                bg-[#E8F8F3]
-                backdrop-blur-xl
-                rounded-3xl
-                shadow-lg
-                border
-                border-[#E8F8F3]
-                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-                hover:-translate-y-2
-                transition-all
-                duration-300
-                flex
-                flex-col
-                justify-between
-                p-7
-              "
+w-[90vw]
+sm:w-[340px]
+md:w-[360px]
+lg:w-[380px]
+flex-shrink-0
+bg-[#E8F8F3]
+backdrop-blur-xl
+rounded-3xl
+overflow-hidden
+shadow-lg
+border
+border-[#E8F8F3]
+hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+hover:-translate-y-2
+transition-all
+duration-300
+"
             >
 
-              <div>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="
+    w-full
+    aspect-[16/9]
+    object-cover
+    object-top
+    transition
+    duration-500
+  "
+              />
+
+              <div className="p-6">
 
                 <h3 className="text-2xl font-bold text-[#2D3748]">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-500 mt-4 leading-relaxed">
+                <p className="text-gray-500 mt-4">
                   {project.description}
                 </p>
-
-              </div>
-
-              <div>
 
                 <div className="flex flex-wrap gap-2 mt-6">
 
@@ -203,29 +202,27 @@ function Projects() {
                     GitHub
                   </a>
 
-                  {project.demo && project.demo !== "#" && project.demo !== project.github && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="
-                        flex-1
-                        border
-                        border-[#57BA98]
-                        py-3
-                        rounded-xl
-                        flex
-                        justify-center
-                        items-center
-                        gap-2
-                        hover:bg-white
-                        transition
-                      "
-                    >
-                      <FaExternalLinkAlt />
-                      Demo
-                    </a>
-                  )}
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      flex-1
+                      border
+                      border-[#57BA98]
+                      py-3
+                      rounded-xl
+                      flex
+                      justify-center
+                      items-center
+                      gap-2
+                      hover:bg-white
+                      transition
+                    "
+                  >
+                    <FaExternalLinkAlt />
+                    Demo
+                  </a>
 
                 </div>
 
@@ -243,3 +240,4 @@ function Projects() {
 }
 
 export default Projects;
+
