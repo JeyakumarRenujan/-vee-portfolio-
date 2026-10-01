@@ -1,185 +1,96 @@
-
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa";
-
+import { FaGithub, FaExternalLinkAlt, FaFolderOpen } from "react-icons/fa";
 import projects from "../../data/projects";
 import Container from "../common/Container";
 
 function Projects() {
-  const sliderRef = useRef(null);
-
-  const scrollLeft = () => {
-    sliderRef.current?.scrollBy({
-      left: -400,
-      behavior: "smooth",
-    });
-  };
-
-  const scrollRight = () => {
-    sliderRef.current?.scrollBy({
-      left: 400,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <section
-      id="projects"
-      className="py-24 bg-transparent"
-    >
+    <section id="projects" className="py-24 bg-transparent">
       <Container>
-
-        <div className="text-center">
-
-          <p className="text-[#57BA98] font-bold uppercase">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <p className="text-[#57BA98] font-bold uppercase tracking-wider text-sm">
             My Works
           </p>
-
-          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
-            Featured Projects
+          <h2 className="text-4xl sm:text-5xl font-bold mt-2 text-[#2D3748]">
+            Featured Projects & Research
           </h2>
-
-          <p className="text-gray-500 mt-4">
-            Some of my projects that demonstrate my technical skills and practical
-            experience.
+          <p className="text-gray-500 mt-4 text-base sm:text-lg">
+            A showcase of my research work, full-stack applications, deep learning models, and IoT projects.
           </p>
-
         </div>
 
-        {/* Arrow Buttons */}
-
-        <div className="flex justify-end gap-3 mt-10 mb-6">
-
-          <button
-            onClick={scrollLeft}
-            className="
-              w-11
-              h-11
-              rounded-full
-              bg-[#EDF8F5]
-              text-[#57BA98]
-              shadow
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-            "
-          >
-            <FaChevronLeft className="mx-auto" />
-          </button>
-
-          <button
-            onClick={scrollRight}
-            className="
-              w-11
-              h-11
-              rounded-full
-              bg-[#EDF8F5]
-              text-[#57BA98]
-              shadow
-              hover:bg-[#57BA98]
-              hover:text-white
-              transition
-            "
-          >
-            <FaChevronRight className="mx-auto" />
-          </button>
-
-        </div>
-
-        {/* Horizontal Scroll */}
-
-        <div
-          ref={sliderRef}
-          className="
-            flex
-            gap-8
-            overflow-x-auto
-            scroll-smooth
-            pb-4
-            scrollbar-hide
-          "
-        >
-
-          {projects.map((project) => (
-
+        {/* Responsive Grid Layout with Equal Card Heights */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              whileHover={{
-                y: -10,
-              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
               className="
-w-[90vw]
-sm:w-[340px]
-md:w-[360px]
-lg:w-[380px]
-flex-shrink-0
-bg-[#E8F8F3]
-backdrop-blur-xl
-rounded-3xl
-overflow-hidden
-shadow-lg
-border
-border-[#E8F8F3]
-hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-hover:-translate-y-2
-transition-all
-duration-300
-"
+                flex flex-col justify-between
+                bg-[#E8F8F3]
+                backdrop-blur-xl
+                rounded-3xl
+                p-7
+                shadow-md
+                border border-[#D2F2E7]
+                hover:shadow-[0_15px_35px_rgba(87,186,152,0.22)]
+                hover:border-[#57BA98]
+                transition-all
+                duration-300
+              "
             >
+              <div>
+                {/* Card Header: Icon & Type Badge */}
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <div className="w-10 h-10 rounded-2xl bg-[#57BA98]/15 text-[#57BA98] flex items-center justify-center text-lg">
+                    <FaFolderOpen />
+                  </div>
+                  {project.type && (
+                    <span className="bg-white text-[#388E75] text-xs font-semibold px-3 py-1 rounded-full border border-[#57BA98]/30">
+                      {project.type}
+                    </span>
+                  )}
+                </div>
 
-              <img
-                src={project.image}
-                alt={project.title}
-                className="
-    w-full
-    aspect-[16/9]
-    object-cover
-    object-top
-    transition
-    duration-500
-  "
-              />
-
-              <div className="p-6">
-
-                <h3 className="text-2xl font-bold text-[#2D3748]">
+                {/* Project Title */}
+                <h3 className="text-xl sm:text-2xl font-bold text-[#2D3748] leading-snug">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-500 mt-4">
+                {/* Project Description */}
+                <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
                   {project.description}
                 </p>
+              </div>
 
-                <div className="flex flex-wrap gap-2 mt-6">
-
+              <div className="mt-6">
+                {/* Tech Stack Pills */}
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
-
                     <span
                       key={tech}
                       className="
                         bg-white
-                        text-[#57BA98]
+                        text-[#388E75]
                         px-3
                         py-1
                         rounded-full
-                        text-sm
+                        text-xs
+                        font-medium
+                        shadow-sm
                       "
                     >
                       {tech}
                     </span>
-
                   ))}
-
                 </div>
 
-                <div className="flex gap-4 mt-8">
-
+                {/* Bottom Action Link */}
+                <div className="flex items-center gap-3 pt-4 border-t border-[#57BA98]/20">
                   <a
                     href={project.github}
                     target="_blank"
@@ -188,56 +99,58 @@ duration-300
                       flex-1
                       bg-[#57BA98]
                       text-white
-                      py-3
+                      py-2.5
+                      px-4
                       rounded-xl
                       flex
                       justify-center
                       items-center
                       gap-2
-                      hover:bg-[#65CCB8]
-                      transition
+                      font-semibold
+                      text-sm
+                      hover:bg-[#489e80]
+                      transition-all
+                      shadow-sm
                     "
                   >
-                    <FaGithub />
-                    GitHub
+                    <FaGithub className="text-base" />
+                    GitHub Repository
                   </a>
 
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="
-                      flex-1
-                      border
-                      border-[#57BA98]
-                      py-3
-                      rounded-xl
-                      flex
-                      justify-center
-                      items-center
-                      gap-2
-                      hover:bg-white
-                      transition
-                    "
-                  >
-                    <FaExternalLinkAlt />
-                    Demo
-                  </a>
-
+                  {project.demo && project.demo !== "#" && project.demo !== project.github && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="
+                        border
+                        border-[#57BA98]
+                        text-[#57BA98]
+                        py-2.5
+                        px-4
+                        rounded-xl
+                        flex
+                        justify-center
+                        items-center
+                        gap-2
+                        font-semibold
+                        text-sm
+                        hover:bg-white
+                        transition-all
+                      "
+                    >
+                      <FaExternalLinkAlt className="text-xs" />
+                      Demo
+                    </a>
+                  )}
                 </div>
-
               </div>
-
             </motion.div>
-
           ))}
-
         </div>
-
       </Container>
     </section>
   );
 }
 
 export default Projects;
-

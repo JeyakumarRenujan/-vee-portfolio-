@@ -1,16 +1,17 @@
 const heroData = {
   greeting: "Welcome, It's",
-  name: "Varnaja Uthayaraj",
+  name: "Varnaja ",
   roles: [
-    "AI/ML Enthusiast",
-    "Software Engineer",
-    "IoT & Networking Explorer",
-    "Computer Engineering Student",
+    "Computer Engineer",
+    "Cybersecuirty Enthusiast",
     "Full Stack Developer",
+    "Technology Explorer",
+    "AI/ML Enthusiast",
+    "UI Designer",
   ],
   
   description:
-    "Passionate computer engineering student specializing in AI/ML, Software Engineering, and IoT. Building intelligent, secure, and scalable solutions for real-world challenges.",
+    "I build responsive, scalable and modern web applications using the latest technologies while continuously learning and solving real-world problems.",
 
   github: "https://github.com/VeeQubit",
   linkedin: "https://www.linkedin.com/in/varnaja01/",

@@ -1,18 +1,20 @@
 const aboutData = {
   title: "About Me",
 
-  subtitle: "Computer Engineering Student | AI/ML & Software Engineering",
+  subtitle: "Computer Engineer",
 
   description:
-    "As a computer engineering student at the University of Jaffna, I am passionate about Software Engineering, AI, ML, and Networking. I have built a strong theoretical foundation complemented by practical skills, honed through coursework and hands-on projects. I am eager to tackle real-world challenges, contribute to innovative solutions, and continuously develop my expertise in a dynamic and rewarding environment.",
+    "Computer Engineering undergraduate passionate about Cyber Security and Full Stack Development. I enjoy building secure, scalable, and modern web applications while continuously exploring new technologies and creating innovative solutions to real-world problems.",
 
   points: [
-    "AI/ML & NLP Model Development",
-    "Full-Stack Web Development",
-    "IoT & Embedded Systems",
-    "Agile Project Management",
-    "Database & API Design",
-    "User-Centred Design (HCI)",
+    
+    "Security-First Software Development",
+    "Responsive Web Development",
+     "Secure API Design & Implementation",
+    "Frontend & Backend Development",
+    
+    "Database Design",
+    "UI/UX Focused Development",
   ],
 };
 

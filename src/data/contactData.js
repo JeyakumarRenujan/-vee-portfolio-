@@ -1,7 +1,8 @@
+
 const contactData = {
   email: "vee.cyber369@gmail.com",
 
-  phone: "+94 74 335 3340",
+  phone: "+94 743353340",
 
   location: "Sri Lanka",
 
@@ -11,3 +12,4 @@ const contactData = {
 };
 
 export default contactData;
+

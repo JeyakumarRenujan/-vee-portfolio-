@@ -1,29 +1,35 @@
+
 const services = [
   {
-    title: "AI/ML & NLP Solutions",
-    description:
-      "Developing machine learning models, computer vision systems (YOLO/PyTorch), and transformer-based NLP solutions for text classification, sentiment, and intent detection.",
+  title: "Cyber Security",
+  description:
+    "Applying security best practices to identify vulnerabilities, protect applications, and strengthen system security through ethical hacking and defensive techniques.",
   },
+
   {
-    title: "Full-Stack Web Development",
+    title: "Frontend Development",
     description:
-      "Building scalable, responsive web applications using React, Spring Boot, Node.js, Express, and Tailwind CSS with secure RESTful APIs.",
+      "Building modern, responsive and interactive user interfaces using React and Tailwind CSS.",
   },
+
   {
-    title: "IoT & Embedded Systems",
+    title: "Backend Development",
     description:
-      "Designing smart IoT monitoring systems integrating ESP32 hardware sensors, microcontrollers, real-time telemetry, and backend cloud analytics.",
+      "Developing secure server-side applications and RESTful APIs using Node.js and Express.",
   },
+
   {
-    title: "Database & Backend Systems",
+    title: "Database Design",
     description:
-      "Architecting robust database schemas and backend services using MySQL, MongoDB, Node.js, and Spring Boot with JWT authentication.",
+      "Designing efficient relational and NoSQL databases using MySQL and MongoDB.",
   },
+
   {
-    title: "UI/UX & HCI Design",
+    title: "Responsive Web Design",
     description:
-      "Designing intuitive, user-centred digital interfaces and interactive workspaces focused on cognitive ergonomics and seamless user interaction.",
+      "Creating websites that work seamlessly across desktop, tablet and mobile devices.",
   },
 ];
 
 export default services;
+
