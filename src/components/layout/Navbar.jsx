@@ -10,7 +10,6 @@ function Navbar() {
   const navLinks = [
     "Home",
     "About",
-    "Research",
     "Skills",
     "Projects",
     "Experience",

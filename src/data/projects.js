@@ -1,22 +1,6 @@
 const projects = [
   {
     id: 1,
-    title: "Sentiment & Intent Detection in Code-Mixed Text",
-    type: "Research Project",
-    description:
-      "Developed a MuRIL-based multi-task Transformer for Tamil-English code-mixed sentiment, intent, and sarcasm detection. Built a gold-standard dataset through multi-annotator labeling and integrated expressive linguistic features through feature fusion.",
-    technologies: [
-      "Python",
-      "MuRIL",
-      "Transformers",
-      "PyTorch",
-      "NLP",
-    ],
-    github: "https://github.com/VeeQubit",
-    demo: "https://github.com/VeeQubit",
-  },
-  {
-    id: 2,
     title: "Equipment Request Management System",
     type: "Full Stack Web App",
     description:
@@ -32,7 +16,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 3,
+    id: 2,
     title: "Artisan Gallery - Full Stack Inventory Management",
     type: "Full Stack Web App",
     description:
@@ -49,7 +33,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 4,
+    id: 3,
     title: "Me Plus - Freelancer Task Management Platform",
     type: "Web Application",
     description:
@@ -66,7 +50,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 5,
+    id: 4,
     title: "Linkzo Live - Real-time Video Conferencing",
     type: "WebRTC Application",
     description:
@@ -82,7 +66,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 6,
+    id: 5,
     title: "Dam Safety Monitoring System",
     type: "IoT & Embedded System",
     description:
@@ -98,7 +82,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 7,
+    id: 6,
     title: "Electronic Waste Detection & Classification",
     type: "Deep Learning & CV",
     description:
@@ -114,7 +98,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 8,
+    id: 7,
     title: "CPU Scheduling Simulator",
     type: "Operating Systems Tool",
     description:
@@ -129,7 +113,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 9,
+    id: 8,
     title: "Lab Scheduling & Reservation System",
     type: "Web Application",
     description:
@@ -144,7 +128,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 10,
+    id: 9,
     title: "Course Registration System",
     type: "Web Application",
     description:
@@ -159,7 +143,7 @@ const projects = [
     demo: "https://github.com/VeeQubit",
   },
   {
-    id: 11,
+    id: 10,
     title: "Modern Personal Portfolio Website",
     type: "Web Application",
     description:
