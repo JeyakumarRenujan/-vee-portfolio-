@@ -34,17 +34,17 @@ function Projects() {
     >
       <Container>
 
-        <div className="relative text-center mb-4 sm:mb-5">
+        <div className="relative text-center mb-8 sm:mb-10 md:mb-12">
 
           <p className="text-[#57BA98] font-bold uppercase text-xs sm:text-sm tracking-wider">
             My Works
           </p>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 text-[#2D3748]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1.5 text-[#2D3748]">
             Featured Projects
           </h2>
 
-          <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-2 sm:mt-2.5 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
             Some of my projects that demonstrate my technical skills and practical
             experience.
           </p>
