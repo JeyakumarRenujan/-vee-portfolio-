@@ -9,26 +9,26 @@ import contactData from "../../data/contactData";
 
 function Footer() {
   return (
-    <footer className="ios-glass-footer py-12 text-[#2D3748] mt-12">
+    <footer className="bg-gray-900 text-white py-12 mt-12">
       <Container>
 
         <div className="text-center">
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#2D3748]">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white">
             Varnaja Uthayaraj
           </h2>
 
-          <p className="text-gray-500 mt-2 sm:mt-3 text-sm sm:text-base">
+          <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base">
             AI/ML & Software Engineer | Computer Engineering
           </p>
 
-          <div className="flex justify-center gap-2 sm:gap-3 mt-6 sm:mt-8 flex-wrap text-xs sm:text-sm">
+          <div className="flex justify-center gap-4 sm:gap-8 mt-6 sm:mt-8 flex-wrap text-sm sm:text-base">
 
             {["Home", "About", "Research", "Skills", "Projects", "Experience", "Education", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="px-3.5 py-1.5 rounded-full text-gray-600 hover:text-[#57BA98] hover:bg-white/80 transition-all font-medium"
+                className="text-gray-300 hover:text-[#65CCB8] transition duration-300"
               >
                 {item}
               </a>
@@ -36,16 +36,21 @@ function Footer() {
 
           </div>
 
-          <div className="flex justify-center gap-4 text-xl mt-8">
+          <div className="flex justify-center gap-6 text-2xl mt-8 text-gray-300">
 
             <a
               href={contactData.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="ios-glossy-icon-btn w-10 h-10 rounded-full text-lg"
+              className="
+                hover:text-[#65CCB8]
+                hover:scale-110
+                transition
+                duration-300
+              "
             >
-              <FaGithub className="relative z-10" />
+              <FaGithub />
             </a>
 
             <a
@@ -53,22 +58,32 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="ios-glossy-icon-btn w-10 h-10 rounded-full text-lg"
+              className="
+                hover:text-[#65CCB8]
+                hover:scale-110
+                transition
+                duration-300
+              "
             >
-              <FaLinkedin className="relative z-10" />
+              <FaLinkedin />
             </a>
 
             <a
               href={`mailto:${contactData.email}`}
               aria-label="Email"
-              className="ios-glossy-icon-btn w-10 h-10 rounded-full text-lg"
+              className="
+                hover:text-[#65CCB8]
+                hover:scale-110
+                transition
+                duration-300
+              "
             >
-              <FaEnvelope className="relative z-10" />
+              <FaEnvelope />
             </a>
 
           </div>
 
-          <div className="border-t border-[#57BA98]/15 mt-10 pt-6">
+          <div className="border-t border-[#57BA98]/20 mt-10 pt-6">
 
             <p className="text-gray-400 text-xs sm:text-sm">
               © 2026 Vee. All Rights Reserved.
