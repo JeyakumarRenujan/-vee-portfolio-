@@ -2,23 +2,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6.5rem;
 }
 
 body {
   background: #F7FCFA;
-  overflow-x: hidden;
+  overflow-x: clip;
   color: #2D3748;
-}
-
-#root {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* Ensure all section anchors stop comfortably below the 80px sticky navbar */
-section[id] {
-  scroll-margin-top: 6.5rem !important;
 }
 
 /* Custom scrollbar hiding utility */
